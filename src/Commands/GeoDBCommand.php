@@ -77,7 +77,7 @@ class GeoDBCommand extends Command
 
         $this->info("Migrations:");
         $this->call('migrate', [
-            '--path' => 'vendor/devapexbr/laravel-geo-database/src/database/migrations',
+            '--path' => 'vendor/renalcio/laravel-geo-database/src/database/migrations',
         ]);
         $this->line("");
 
