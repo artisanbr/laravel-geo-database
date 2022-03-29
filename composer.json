@@ -1,0 +1,35 @@
+{
+    "name": "devapexbr/laravel-geo-database",
+    "description": "Laravel Global Geo Info Database",
+    "require": {
+        "php": ">=7",
+        "laravel/framework": ">=5.8"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Renalcio Carlos",
+            "email": "carlos@devapex.com.br",
+            "homepage": "http://devapex.com.br",
+            "role": "Co-founder & Developer"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DevApex\\LaravelGeoDatabase\\GeoDatabaseServiceProvider"
+            ]
+        },
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "DevApex\\LaravelGeoDatabase\\": "src"
+        }
+    }
+}
