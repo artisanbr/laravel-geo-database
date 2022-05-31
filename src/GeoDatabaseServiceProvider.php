@@ -31,8 +31,8 @@ class GeoDatabaseServiceProvider extends ServiceProvider
         //Rotas
         if(file_exists(base_path('routes/geo.php')) || file_exists($this->routes_file)) {
             //$this->loadRoutesFrom(base_path('routes/api_generated.php'));
-            Route::prefix('geo')
-                ->prefix('geo')
+            Route::prefix(config('router.api.prefix', null) . '/geo')
+                ->name('geo')
                 ->as('api.geo.')
                 ->domain(config('router.api.domain', null))
                 ->middleware(['api','guest'])
