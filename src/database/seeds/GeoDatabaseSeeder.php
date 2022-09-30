@@ -1,5 +1,5 @@
 <?php
-namespace DevApex\LaravelGeoDatabase\database\seeds;
+namespace ArtisanLabs\LaravelGeoDatabase\database\seeds;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;

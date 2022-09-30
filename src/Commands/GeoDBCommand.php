@@ -1,11 +1,11 @@
 <?php
 
-namespace DevApex\LaravelGeoDatabase\Commands;
+namespace ArtisanLabs\LaravelGeoDatabase\Commands;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Helper\ProgressBar;
-use DevApex\LaravelGeoDatabase\database\seeds\GeoDatabaseSeeder;
-use DevApex\LaravelRouter\Utils\PhpParser;
+use ArtisanLabs\LaravelGeoDatabase\database\seeds\GeoDatabaseSeeder;
+use ArtisanLabs\LaravelRouter\Utils\PhpParser;
 
 /**
  * Gerador de Rotas para o laravel

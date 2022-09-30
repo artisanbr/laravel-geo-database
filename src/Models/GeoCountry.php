@@ -1,10 +1,10 @@
 <?php
 
-namespace DevApex\LaravelGeoDatabase\Models;
+namespace ArtisanLabs\LaravelGeoDatabase\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class GeoPais extends Model
+class GeoCountry extends Model
 {
     protected $table = 'geo_paises';
 
@@ -16,3 +16,5 @@ class GeoPais extends Model
         return $this->hasMany(GeoEstado::class);
     }
 }
+
+class_alias(GeoCountry::class, 'ArtisanLabs\GModel\Model');

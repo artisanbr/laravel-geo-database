@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DevApex\\LaravelGeoDatabase\\GeoDatabaseServiceProvider"
+                "ArtisanLabs\\LaravelGeoDatabase\\GeoDatabaseServiceProvider"
             ]
         },
         "branch-alias": {
@@ -31,7 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DevApex\\LaravelGeoDatabase\\": "src"
+            "ArtisanLabs\\LaravelGeoDatabase\\": "src"
         }
     }
 }

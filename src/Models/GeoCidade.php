@@ -1,6 +1,6 @@
 <?php
 
-namespace DevApex\LaravelGeoDatabase\Models;
+namespace ArtisanLabs\LaravelGeoDatabase\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

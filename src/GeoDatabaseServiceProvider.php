@@ -1,6 +1,6 @@
 <?php
 
-namespace DevApex\LaravelGeoDatabase;
+namespace ArtisanLabs\LaravelGeoDatabase;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;

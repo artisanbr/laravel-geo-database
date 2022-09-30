@@ -1,6 +1,6 @@
 <?php
 
-namespace DevApex\LaravelGeoDatabase\Models;
+namespace ArtisanLabs\LaravelGeoDatabase\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,6 +15,6 @@ class GeoEstado extends Model
     }
 
     public function pais(){
-        return $this->belongsTo(GeoPais::class);
+        return $this->belongsTo(GeoCountry::class);
     }
 }

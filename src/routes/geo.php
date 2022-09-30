@@ -3,9 +3,9 @@
 //used to disable CORS
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use DevApex\LaravelGeoDatabase\Models\GeoCidade;
-use DevApex\LaravelGeoDatabase\Models\GeoEstado;
-use DevApex\LaravelGeoDatabase\Models\GeoPais;
+use ArtisanLabs\LaravelGeoDatabase\Models\GeoCidade;
+use ArtisanLabs\LaravelGeoDatabase\Models\GeoEstado;
+use ArtisanLabs\LaravelGeoDatabase\Models\GeoCountry;
 
 /*header('Access-Control-Allow-Origin:  *');
 header('Access-Control-Allow-Methods:  POST, GET, OPTIONS, PUT, DELETE');
@@ -17,12 +17,12 @@ header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Origin, Autho
 
 // |||| Informações de endereço |||
 Route::get('paises', function(){
-    return GeoPais::all();
+    return GeoCountry::all();
 })->name('paises');
 
 Route::post('paises/select2', function(Request $request){
 
-    $itens = GeoPais::orderBy("nome");
+    $itens = GeoCountry::orderBy("nome");
 
     if($request->search){
         $itens = $itens->whereLike(['nome', 'nome_en', 'sigla', 'bacen'], $request->search)->limit(50);
@@ -32,7 +32,7 @@ Route::post('paises/select2', function(Request $request){
 
     $itens = $itens->get();
 
-    $itens->transform(fn(GeoPais $item, $key) => [
+    $itens->transform(fn(GeoCountry $item, $key) => [
         'id' => $item->nome,
         'text' => $item->nome,
         'selected' => $item->id == $request->selected_value || empty($key),
@@ -42,11 +42,11 @@ Route::post('paises/select2', function(Request $request){
 })->name('paises.select2');
 
 Route::get('paises/estados', function(){
-    return GeoPais::with('estados')->get();
+    return GeoCountry::with('estados')->get();
 })->name('paises.estados');
 
 Route::get('paises/{id}', function($id){
-    return GeoPais::findOrFail($id);
+    return GeoCountry::findOrFail($id);
 })->name('paises.view');
 
 Route::get('estados', function(){
