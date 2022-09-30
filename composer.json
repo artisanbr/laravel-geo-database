@@ -1,5 +1,5 @@
 {
-    "name": "renalcio/laravel-geo-database",
+    "name": "artisan-labs/laravel-geo-database",
     "description": "Laravel Global Geo Info Database",
     "require": {
         "php": ">=7",
