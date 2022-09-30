@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGeoCidadesTable extends Migration
+class CreateGeoCitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateGeoCidadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('geo_cidades', function (Blueprint $table) {
+        Schema::create('geo_cities', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('nome')->nullable();
+            $table->string('title')->nullable();
             $table->integer('ibge')->nullable();
 
-            $table->integer('estado_id')->unsigned()->nullable();
-            $table->foreign('estado_id')->references('id')->on('estados');
+            $table->foreignId('state_id')->nullable()->constrained('geo_states');
         });
     }
 
@@ -31,6 +30,6 @@ class CreateGeoCidadesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('cidades');
+        Schema::drop('geo_cities');
     }
 }

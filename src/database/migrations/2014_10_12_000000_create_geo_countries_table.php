@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGeoPaisesTable extends Migration
+class CreateGeoCountriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateGeoPaisesTable extends Migration
      */
     public function up()
     {
-        Schema::create('geo_paises', function (Blueprint $table) {
+        Schema::create('geo_countries', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome')->nullable();
-            $table->string('nome_en')->nullable();
-            $table->string('sigla', 3)->nullable();
+            $table->string('title')->nullable();
+            $table->string('title_en')->nullable();
+            $table->string('slug', 3)->nullable();
             $table->integer('bacen')->nullable();
         });
     }
@@ -29,6 +29,6 @@ class CreateGeoPaisesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('geo_paises');
+        Schema::drop('geo_countries');
     }
 }

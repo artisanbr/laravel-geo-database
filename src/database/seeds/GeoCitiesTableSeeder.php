@@ -4,7 +4,7 @@ namespace ArtisanLabs\LaravelGeoDatabase\database\seeds;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class GeoCidadesTableSeeder extends Seeder
+class GeoCitiesTableSeeder extends Seeder
 {
 
     /**
@@ -14,10 +14,10 @@ class GeoCidadesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('geo_cidades')->delete();
+        DB::table('geo_cities')->delete();
 
         DB::unprepared(<<<mylsq
-INSERT INTO `geo_cidades` (`id`, `nome`, `estado_id`, `ibge`) VALUES
+INSERT INTO `geo_cities` (`id`, `title`, `state_id`, `ibge`) VALUES
 (1, 'Afonso Cláudio', 8, 3200102),
 (2, 'Água Doce do Norte', 8, 3200169),
 (3, 'Águia Branca', 8, 3200136),
@@ -1536,7 +1536,7 @@ INSERT INTO `geo_cidades` (`id`, `nome`, `estado_id`, `ibge`) VALUES
 (1518, 'Dourados', 12, 5003702),
 (1519, 'Eldorado', 12, 5003751);
 
-INSERT INTO `geo_cidades` (`id`, `nome`, `estado_id`, `ibge`) VALUES
+INSERT INTO `geo_cities` (`id`, `title`, `state_id`, `ibge`) VALUES
 (1520, 'Fátima do Sul', 12, 5003801),
 (1521, 'Figueirão', 12, 5003900),
 (1522, 'Glória de Dourados', 12, 5004007),
@@ -2978,7 +2978,8 @@ INSERT INTO `geo_cidades` (`id`, `nome`, `estado_id`, `ibge`) VALUES
 (2959, 'Jardim Alegre', 18, 4112504),
 (2960, 'Jardim Olinda', 18, 4112603),
 (2961, 'Jataizinho', 18, 4112702);
-INSERT INTO `geo_cidades` (`id`, `nome`, `estado_id`, `ibge`) VALUES
+
+INSERT INTO `geo_cities` (`id`, `title`, `state_id`, `ibge`) VALUES
 (2962, 'Jesuítas', 18, 4112751),
 (2963, 'Joaquim Távora', 18, 4112801),
 (2964, 'Jundiaí do Sul', 18, 4112900),
@@ -4397,7 +4398,8 @@ INSERT INTO `geo_cidades` (`id`, `nome`, `estado_id`, `ibge`) VALUES
 (4378, 'Ouro Preto do Oeste', 21, 1100155),
 (4379, 'Parecis', 21, 1101450),
 (4380, 'Pimenta Bueno', 21, 1100189);
-INSERT INTO `geo_cidades` (`id`, `nome`, `estado_id`, `ibge`) VALUES
+
+INSERT INTO `geo_cities` (`id`, `title`, `state_id`, `ibge`) VALUES
 (4381, 'Pimenteiras do Oeste', 21, 1101468),
 (4382, 'Porto Velho', 21, 1100205),
 (4383, 'Presidente Médici', 21, 1100254),
@@ -5616,3015 +5618,3015 @@ INSERT INTO `geo_cidades` (`id`, `nome`, `estado_id`, `ibge`) VALUES
 (5607, 'Pinto Bandeira', 23, 4314548),
 (5608, 'Balneário Rincão', 24, 4220000),
 (5609, 'Pescaria Brava', 24, 4212650),
-(5610, 'Exterior', 99, 9999999);
+(5610, 'Exterior', null, 0);
 mylsq);
 
-        /*DB::table('geo_cidades')->insert(array (
+        /*DB::table('geo_cities')->insert(array (
             0 =>
             array (
                 'id' => '1',
-                'nome' => 'Afonso Cláudio',
-                'estado_id' => '8',
+                'title' => 'Afonso Cláudio',
+                'state_id' => '8',
             ),
             1 =>
             array (
                 'id' => '2',
-                'nome' => 'Água Doce do Norte',
-                'estado_id' => '8',
+                'title' => 'Água Doce do Norte',
+                'state_id' => '8',
             ),
             2 =>
             array (
                 'id' => '3',
-                'nome' => 'Águia Branca',
-                'estado_id' => '8',
+                'title' => 'Águia Branca',
+                'state_id' => '8',
             ),
             3 =>
             array (
                 'id' => '4',
-                'nome' => 'Alegre',
-                'estado_id' => '8',
+                'title' => 'Alegre',
+                'state_id' => '8',
             ),
             4 =>
             array (
                 'id' => '5',
-                'nome' => 'Alfredo Chaves',
-                'estado_id' => '8',
+                'title' => 'Alfredo Chaves',
+                'state_id' => '8',
             ),
             5 =>
             array (
                 'id' => '6',
-                'nome' => 'Alto Rio Novo',
-                'estado_id' => '8',
+                'title' => 'Alto Rio Novo',
+                'state_id' => '8',
             ),
             6 =>
             array (
                 'id' => '7',
-                'nome' => 'Anchieta',
-                'estado_id' => '8',
+                'title' => 'Anchieta',
+                'state_id' => '8',
             ),
             7 =>
             array (
                 'id' => '8',
-                'nome' => 'Apiacá',
-                'estado_id' => '8',
+                'title' => 'Apiacá',
+                'state_id' => '8',
             ),
             8 =>
             array (
                 'id' => '9',
-                'nome' => 'Aracruz',
-                'estado_id' => '8',
+                'title' => 'Aracruz',
+                'state_id' => '8',
             ),
             9 =>
             array (
                 'id' => '10',
-                'nome' => 'Atilio Vivacqua',
-                'estado_id' => '8',
+                'title' => 'Atilio Vivacqua',
+                'state_id' => '8',
             ),
             10 =>
             array (
                 'id' => '11',
-                'nome' => 'Baixo Guandu',
-                'estado_id' => '8',
+                'title' => 'Baixo Guandu',
+                'state_id' => '8',
             ),
             11 =>
             array (
                 'id' => '12',
-                'nome' => 'Barra de São Francisco',
-                'estado_id' => '8',
+                'title' => 'Barra de São Francisco',
+                'state_id' => '8',
             ),
             12 =>
             array (
                 'id' => '13',
-                'nome' => 'Boa Esperança',
-                'estado_id' => '8',
+                'title' => 'Boa Esperança',
+                'state_id' => '8',
             ),
             13 =>
             array (
                 'id' => '14',
-                'nome' => 'Bom Jesus do Norte',
-                'estado_id' => '8',
+                'title' => 'Bom Jesus do Norte',
+                'state_id' => '8',
             ),
             14 =>
             array (
                 'id' => '15',
-                'nome' => 'Brejetuba',
-                'estado_id' => '8',
+                'title' => 'Brejetuba',
+                'state_id' => '8',
             ),
             15 =>
             array (
                 'id' => '16',
-                'nome' => 'Cachoeiro de Itapemirim',
-                'estado_id' => '8',
+                'title' => 'Cachoeiro de Itapemirim',
+                'state_id' => '8',
             ),
             16 =>
             array (
                 'id' => '17',
-                'nome' => 'Cariacica',
-                'estado_id' => '8',
+                'title' => 'Cariacica',
+                'state_id' => '8',
             ),
             17 =>
             array (
                 'id' => '18',
-                'nome' => 'Castelo',
-                'estado_id' => '8',
+                'title' => 'Castelo',
+                'state_id' => '8',
             ),
             18 =>
             array (
                 'id' => '19',
-                'nome' => 'Colatina',
-                'estado_id' => '8',
+                'title' => 'Colatina',
+                'state_id' => '8',
             ),
             19 =>
             array (
                 'id' => '20',
-                'nome' => 'Conceição da Barra',
-                'estado_id' => '8',
+                'title' => 'Conceição da Barra',
+                'state_id' => '8',
             ),
             20 =>
             array (
                 'id' => '21',
-                'nome' => 'Conceição do Castelo',
-                'estado_id' => '8',
+                'title' => 'Conceição do Castelo',
+                'state_id' => '8',
             ),
             21 =>
             array (
                 'id' => '22',
-                'nome' => 'Divino de São Lourenço',
-                'estado_id' => '8',
+                'title' => 'Divino de São Lourenço',
+                'state_id' => '8',
             ),
             22 =>
             array (
                 'id' => '23',
-                'nome' => 'Domingos Martins',
-                'estado_id' => '8',
+                'title' => 'Domingos Martins',
+                'state_id' => '8',
             ),
             23 =>
             array (
                 'id' => '24',
-                'nome' => 'Dores do Rio Preto',
-                'estado_id' => '8',
+                'title' => 'Dores do Rio Preto',
+                'state_id' => '8',
             ),
             24 =>
             array (
                 'id' => '25',
-                'nome' => 'Ecoporanga',
-                'estado_id' => '8',
+                'title' => 'Ecoporanga',
+                'state_id' => '8',
             ),
             25 =>
             array (
                 'id' => '26',
-                'nome' => 'Fundão',
-                'estado_id' => '8',
+                'title' => 'Fundão',
+                'state_id' => '8',
             ),
             26 =>
             array (
                 'id' => '27',
-                'nome' => 'Governador Lindenberg',
-                'estado_id' => '8',
+                'title' => 'Governador Lindenberg',
+                'state_id' => '8',
             ),
             27 =>
             array (
                 'id' => '28',
-                'nome' => 'Guaçuí',
-                'estado_id' => '8',
+                'title' => 'Guaçuí',
+                'state_id' => '8',
             ),
             28 =>
             array (
                 'id' => '29',
-                'nome' => 'Guarapari',
-                'estado_id' => '8',
+                'title' => 'Guarapari',
+                'state_id' => '8',
             ),
             29 =>
             array (
                 'id' => '30',
-                'nome' => 'Ibatiba',
-                'estado_id' => '8',
+                'title' => 'Ibatiba',
+                'state_id' => '8',
             ),
             30 =>
             array (
                 'id' => '31',
-                'nome' => 'Ibiraçu',
-                'estado_id' => '8',
+                'title' => 'Ibiraçu',
+                'state_id' => '8',
             ),
             31 =>
             array (
                 'id' => '32',
-                'nome' => 'Ibitirama',
-                'estado_id' => '8',
+                'title' => 'Ibitirama',
+                'state_id' => '8',
             ),
             32 =>
             array (
                 'id' => '33',
-                'nome' => 'Iconha',
-                'estado_id' => '8',
+                'title' => 'Iconha',
+                'state_id' => '8',
             ),
             33 =>
             array (
                 'id' => '34',
-                'nome' => 'Irupi',
-                'estado_id' => '8',
+                'title' => 'Irupi',
+                'state_id' => '8',
             ),
             34 =>
             array (
                 'id' => '35',
-                'nome' => 'Itaguaçu',
-                'estado_id' => '8',
+                'title' => 'Itaguaçu',
+                'state_id' => '8',
             ),
             35 =>
             array (
                 'id' => '36',
-                'nome' => 'Itapemirim',
-                'estado_id' => '8',
+                'title' => 'Itapemirim',
+                'state_id' => '8',
             ),
             36 =>
             array (
                 'id' => '37',
-                'nome' => 'Itarana',
-                'estado_id' => '8',
+                'title' => 'Itarana',
+                'state_id' => '8',
             ),
             37 =>
             array (
                 'id' => '38',
-                'nome' => 'Iúna',
-                'estado_id' => '8',
+                'title' => 'Iúna',
+                'state_id' => '8',
             ),
             38 =>
             array (
                 'id' => '39',
-                'nome' => 'Jaguaré',
-                'estado_id' => '8',
+                'title' => 'Jaguaré',
+                'state_id' => '8',
             ),
             39 =>
             array (
                 'id' => '40',
-                'nome' => 'Jerônimo Monteiro',
-                'estado_id' => '8',
+                'title' => 'Jerônimo Monteiro',
+                'state_id' => '8',
             ),
             40 =>
             array (
                 'id' => '41',
-                'nome' => 'João Neiva',
-                'estado_id' => '8',
+                'title' => 'João Neiva',
+                'state_id' => '8',
             ),
             41 =>
             array (
                 'id' => '42',
-                'nome' => 'Laranja da Terra',
-                'estado_id' => '8',
+                'title' => 'Laranja da Terra',
+                'state_id' => '8',
             ),
             42 =>
             array (
                 'id' => '43',
-                'nome' => 'Linhares',
-                'estado_id' => '8',
+                'title' => 'Linhares',
+                'state_id' => '8',
             ),
             43 =>
             array (
                 'id' => '44',
-                'nome' => 'Mantenópolis',
-                'estado_id' => '8',
+                'title' => 'Mantenópolis',
+                'state_id' => '8',
             ),
             44 =>
             array (
                 'id' => '45',
-                'nome' => 'Marataízes',
-                'estado_id' => '8',
+                'title' => 'Marataízes',
+                'state_id' => '8',
             ),
             45 =>
             array (
                 'id' => '46',
-                'nome' => 'Marechal Floriano',
-                'estado_id' => '8',
+                'title' => 'Marechal Floriano',
+                'state_id' => '8',
             ),
             46 =>
             array (
                 'id' => '47',
-                'nome' => 'Marilândia',
-                'estado_id' => '8',
+                'title' => 'Marilândia',
+                'state_id' => '8',
             ),
             47 =>
             array (
                 'id' => '48',
-                'nome' => 'Mimoso do Sul',
-                'estado_id' => '8',
+                'title' => 'Mimoso do Sul',
+                'state_id' => '8',
             ),
             48 =>
             array (
                 'id' => '49',
-                'nome' => 'Montanha',
-                'estado_id' => '8',
+                'title' => 'Montanha',
+                'state_id' => '8',
             ),
             49 =>
             array (
                 'id' => '50',
-                'nome' => 'Mucurici',
-                'estado_id' => '8',
+                'title' => 'Mucurici',
+                'state_id' => '8',
             ),
             50 =>
             array (
                 'id' => '51',
-                'nome' => 'Muniz Freire',
-                'estado_id' => '8',
+                'title' => 'Muniz Freire',
+                'state_id' => '8',
             ),
             51 =>
             array (
                 'id' => '52',
-                'nome' => 'Muqui',
-                'estado_id' => '8',
+                'title' => 'Muqui',
+                'state_id' => '8',
             ),
             52 =>
             array (
                 'id' => '53',
-                'nome' => 'Nova Venécia',
-                'estado_id' => '8',
+                'title' => 'Nova Venécia',
+                'state_id' => '8',
             ),
             53 =>
             array (
                 'id' => '54',
-                'nome' => 'Pancas',
-                'estado_id' => '8',
+                'title' => 'Pancas',
+                'state_id' => '8',
             ),
             54 =>
             array (
                 'id' => '55',
-                'nome' => 'Pedro Canário',
-                'estado_id' => '8',
+                'title' => 'Pedro Canário',
+                'state_id' => '8',
             ),
             55 =>
             array (
                 'id' => '56',
-                'nome' => 'Pinheiros',
-                'estado_id' => '8',
+                'title' => 'Pinheiros',
+                'state_id' => '8',
             ),
             56 =>
             array (
                 'id' => '57',
-                'nome' => 'Piúma',
-                'estado_id' => '8',
+                'title' => 'Piúma',
+                'state_id' => '8',
             ),
             57 =>
             array (
                 'id' => '58',
-                'nome' => 'Ponto Belo',
-                'estado_id' => '8',
+                'title' => 'Ponto Belo',
+                'state_id' => '8',
             ),
             58 =>
             array (
                 'id' => '59',
-                'nome' => 'Presidente Kennedy',
-                'estado_id' => '8',
+                'title' => 'Presidente Kennedy',
+                'state_id' => '8',
             ),
             59 =>
             array (
                 'id' => '60',
-                'nome' => 'Rio Bananal',
-                'estado_id' => '8',
+                'title' => 'Rio Bananal',
+                'state_id' => '8',
             ),
             60 =>
             array (
                 'id' => '61',
-                'nome' => 'Rio Novo do Sul',
-                'estado_id' => '8',
+                'title' => 'Rio Novo do Sul',
+                'state_id' => '8',
             ),
             61 =>
             array (
                 'id' => '62',
-                'nome' => 'Santa Leopoldina',
-                'estado_id' => '8',
+                'title' => 'Santa Leopoldina',
+                'state_id' => '8',
             ),
             62 =>
             array (
                 'id' => '63',
-                'nome' => 'Santa Maria de Jetibá',
-                'estado_id' => '8',
+                'title' => 'Santa Maria de Jetibá',
+                'state_id' => '8',
             ),
             63 =>
             array (
                 'id' => '64',
-                'nome' => 'Santa Teresa',
-                'estado_id' => '8',
+                'title' => 'Santa Teresa',
+                'state_id' => '8',
             ),
             64 =>
             array (
                 'id' => '65',
-                'nome' => 'São Domingos do Norte',
-                'estado_id' => '8',
+                'title' => 'São Domingos do Norte',
+                'state_id' => '8',
             ),
             65 =>
             array (
                 'id' => '66',
-                'nome' => 'São Gabriel da Palha',
-                'estado_id' => '8',
+                'title' => 'São Gabriel da Palha',
+                'state_id' => '8',
             ),
             66 =>
             array (
                 'id' => '67',
-                'nome' => 'São José do Calçado',
-                'estado_id' => '8',
+                'title' => 'São José do Calçado',
+                'state_id' => '8',
             ),
             67 =>
             array (
                 'id' => '68',
-                'nome' => 'São Mateus',
-                'estado_id' => '8',
+                'title' => 'São Mateus',
+                'state_id' => '8',
             ),
             68 =>
             array (
                 'id' => '69',
-                'nome' => 'São Roque do Canaã',
-                'estado_id' => '8',
+                'title' => 'São Roque do Canaã',
+                'state_id' => '8',
             ),
             69 =>
             array (
                 'id' => '70',
-                'nome' => 'Serra',
-                'estado_id' => '8',
+                'title' => 'Serra',
+                'state_id' => '8',
             ),
             70 =>
             array (
                 'id' => '71',
-                'nome' => 'Sooretama',
-                'estado_id' => '8',
+                'title' => 'Sooretama',
+                'state_id' => '8',
             ),
             71 =>
             array (
                 'id' => '72',
-                'nome' => 'Vargem Alta',
-                'estado_id' => '8',
+                'title' => 'Vargem Alta',
+                'state_id' => '8',
             ),
             72 =>
             array (
                 'id' => '73',
-                'nome' => 'Venda Nova do Imigrante',
-                'estado_id' => '8',
+                'title' => 'Venda Nova do Imigrante',
+                'state_id' => '8',
             ),
             73 =>
             array (
                 'id' => '74',
-                'nome' => 'Viana',
-                'estado_id' => '8',
+                'title' => 'Viana',
+                'state_id' => '8',
             ),
             74 =>
             array (
                 'id' => '75',
-                'nome' => 'Vila Pavão',
-                'estado_id' => '8',
+                'title' => 'Vila Pavão',
+                'state_id' => '8',
             ),
             75 =>
             array (
                 'id' => '76',
-                'nome' => 'Vila Valério',
-                'estado_id' => '8',
+                'title' => 'Vila Valério',
+                'state_id' => '8',
             ),
             76 =>
             array (
                 'id' => '77',
-                'nome' => 'Vila Velha',
-                'estado_id' => '8',
+                'title' => 'Vila Velha',
+                'state_id' => '8',
             ),
             77 =>
             array (
                 'id' => '78',
-                'nome' => 'Vitória',
-                'estado_id' => '8',
+                'title' => 'Vitória',
+                'state_id' => '8',
             ),
             78 =>
             array (
                 'id' => '79',
-                'nome' => 'Acrelândia',
-                'estado_id' => '1',
+                'title' => 'Acrelândia',
+                'state_id' => '1',
             ),
             79 =>
             array (
                 'id' => '80',
-                'nome' => 'Assis Brasil',
-                'estado_id' => '1',
+                'title' => 'Assis Brasil',
+                'state_id' => '1',
             ),
             80 =>
             array (
                 'id' => '81',
-                'nome' => 'Brasiléia',
-                'estado_id' => '1',
+                'title' => 'Brasiléia',
+                'state_id' => '1',
             ),
             81 =>
             array (
                 'id' => '82',
-                'nome' => 'Bujari',
-                'estado_id' => '1',
+                'title' => 'Bujari',
+                'state_id' => '1',
             ),
             82 =>
             array (
                 'id' => '83',
-                'nome' => 'Capixaba',
-                'estado_id' => '1',
+                'title' => 'Capixaba',
+                'state_id' => '1',
             ),
             83 =>
             array (
                 'id' => '84',
-                'nome' => 'Cruzeiro do Sul',
-                'estado_id' => '1',
+                'title' => 'Cruzeiro do Sul',
+                'state_id' => '1',
             ),
             84 =>
             array (
                 'id' => '85',
-                'nome' => 'Epitaciolândia',
-                'estado_id' => '1',
+                'title' => 'Epitaciolândia',
+                'state_id' => '1',
             ),
             85 =>
             array (
                 'id' => '86',
-                'nome' => 'Feijó',
-                'estado_id' => '1',
+                'title' => 'Feijó',
+                'state_id' => '1',
             ),
             86 =>
             array (
                 'id' => '87',
-                'nome' => 'Jordão',
-                'estado_id' => '1',
+                'title' => 'Jordão',
+                'state_id' => '1',
             ),
             87 =>
             array (
                 'id' => '88',
-                'nome' => 'Mâncio Lima',
-                'estado_id' => '1',
+                'title' => 'Mâncio Lima',
+                'state_id' => '1',
             ),
             88 =>
             array (
                 'id' => '89',
-                'nome' => 'Manoel Urbano',
-                'estado_id' => '1',
+                'title' => 'Manoel Urbano',
+                'state_id' => '1',
             ),
             89 =>
             array (
                 'id' => '90',
-                'nome' => 'Marechal Thaumaturgo',
-                'estado_id' => '1',
+                'title' => 'Marechal Thaumaturgo',
+                'state_id' => '1',
             ),
             90 =>
             array (
                 'id' => '91',
-                'nome' => 'Plácido de Castro',
-                'estado_id' => '1',
+                'title' => 'Plácido de Castro',
+                'state_id' => '1',
             ),
             91 =>
             array (
                 'id' => '92',
-                'nome' => 'Porto Acre',
-                'estado_id' => '1',
+                'title' => 'Porto Acre',
+                'state_id' => '1',
             ),
             92 =>
             array (
                 'id' => '93',
-                'nome' => 'Porto Walter',
-                'estado_id' => '1',
+                'title' => 'Porto Walter',
+                'state_id' => '1',
             ),
             93 =>
             array (
                 'id' => '94',
-                'nome' => 'Rio Branco',
-                'estado_id' => '1',
+                'title' => 'Rio Branco',
+                'state_id' => '1',
             ),
             94 =>
             array (
                 'id' => '95',
-                'nome' => 'Rodrigues Alves',
-                'estado_id' => '1',
+                'title' => 'Rodrigues Alves',
+                'state_id' => '1',
             ),
             95 =>
             array (
                 'id' => '96',
-                'nome' => 'Santa Rosa do Purus',
-                'estado_id' => '1',
+                'title' => 'Santa Rosa do Purus',
+                'state_id' => '1',
             ),
             96 =>
             array (
                 'id' => '97',
-                'nome' => 'Sena Madureira',
-                'estado_id' => '1',
+                'title' => 'Sena Madureira',
+                'state_id' => '1',
             ),
             97 =>
             array (
                 'id' => '98',
-                'nome' => 'Senador Guiomard',
-                'estado_id' => '1',
+                'title' => 'Senador Guiomard',
+                'state_id' => '1',
             ),
             98 =>
             array (
                 'id' => '99',
-                'nome' => 'Tarauacá',
-                'estado_id' => '1',
+                'title' => 'Tarauacá',
+                'state_id' => '1',
             ),
             99 =>
             array (
                 'id' => '100',
-                'nome' => 'Xapuri',
-                'estado_id' => '1',
+                'title' => 'Xapuri',
+                'state_id' => '1',
             ),
             100 =>
             array (
                 'id' => '101',
-                'nome' => 'Água Branca',
-                'estado_id' => '2',
+                'title' => 'Água Branca',
+                'state_id' => '2',
             ),
             101 =>
             array (
                 'id' => '102',
-                'nome' => 'Anadia',
-                'estado_id' => '2',
+                'title' => 'Anadia',
+                'state_id' => '2',
             ),
             102 =>
             array (
                 'id' => '103',
-                'nome' => 'Arapiraca',
-                'estado_id' => '2',
+                'title' => 'Arapiraca',
+                'state_id' => '2',
             ),
             103 =>
             array (
                 'id' => '104',
-                'nome' => 'Atalaia',
-                'estado_id' => '2',
+                'title' => 'Atalaia',
+                'state_id' => '2',
             ),
             104 =>
             array (
                 'id' => '105',
-                'nome' => 'Barra de Santo Antônio',
-                'estado_id' => '2',
+                'title' => 'Barra de Santo Antônio',
+                'state_id' => '2',
             ),
             105 =>
             array (
                 'id' => '106',
-                'nome' => 'Barra de São Miguel',
-                'estado_id' => '2',
+                'title' => 'Barra de São Miguel',
+                'state_id' => '2',
             ),
             106 =>
             array (
                 'id' => '107',
-                'nome' => 'Batalha',
-                'estado_id' => '2',
+                'title' => 'Batalha',
+                'state_id' => '2',
             ),
             107 =>
             array (
                 'id' => '108',
-                'nome' => 'Belém',
-                'estado_id' => '2',
+                'title' => 'Belém',
+                'state_id' => '2',
             ),
             108 =>
             array (
                 'id' => '109',
-                'nome' => 'Belo Monte',
-                'estado_id' => '2',
+                'title' => 'Belo Monte',
+                'state_id' => '2',
             ),
             109 =>
             array (
                 'id' => '110',
-                'nome' => 'Boca da Mata',
-                'estado_id' => '2',
+                'title' => 'Boca da Mata',
+                'state_id' => '2',
             ),
             110 =>
             array (
                 'id' => '111',
-                'nome' => 'Branquinha',
-                'estado_id' => '2',
+                'title' => 'Branquinha',
+                'state_id' => '2',
             ),
             111 =>
             array (
                 'id' => '112',
-                'nome' => 'Cacimbinhas',
-                'estado_id' => '2',
+                'title' => 'Cacimbinhas',
+                'state_id' => '2',
             ),
             112 =>
             array (
                 'id' => '113',
-                'nome' => 'Cajueiro',
-                'estado_id' => '2',
+                'title' => 'Cajueiro',
+                'state_id' => '2',
             ),
             113 =>
             array (
                 'id' => '114',
-                'nome' => 'Campestre',
-                'estado_id' => '2',
+                'title' => 'Campestre',
+                'state_id' => '2',
             ),
             114 =>
             array (
                 'id' => '115',
-                'nome' => 'Campo Alegre',
-                'estado_id' => '2',
+                'title' => 'Campo Alegre',
+                'state_id' => '2',
             ),
             115 =>
             array (
                 'id' => '116',
-                'nome' => 'Campo Grande',
-                'estado_id' => '2',
+                'title' => 'Campo Grande',
+                'state_id' => '2',
             ),
             116 =>
             array (
                 'id' => '117',
-                'nome' => 'Canapi',
-                'estado_id' => '2',
+                'title' => 'Canapi',
+                'state_id' => '2',
             ),
             117 =>
             array (
                 'id' => '118',
-                'nome' => 'Capela',
-                'estado_id' => '2',
+                'title' => 'Capela',
+                'state_id' => '2',
             ),
             118 =>
             array (
                 'id' => '119',
-                'nome' => 'Carneiros',
-                'estado_id' => '2',
+                'title' => 'Carneiros',
+                'state_id' => '2',
             ),
             119 =>
             array (
                 'id' => '120',
-                'nome' => 'Chã Preta',
-                'estado_id' => '2',
+                'title' => 'Chã Preta',
+                'state_id' => '2',
             ),
             120 =>
             array (
                 'id' => '121',
-                'nome' => 'Coité do Nóia',
-                'estado_id' => '2',
+                'title' => 'Coité do Nóia',
+                'state_id' => '2',
             ),
             121 =>
             array (
                 'id' => '122',
-                'nome' => 'Colônia Leopoldina',
-                'estado_id' => '2',
+                'title' => 'Colônia Leopoldina',
+                'state_id' => '2',
             ),
             122 =>
             array (
                 'id' => '123',
-                'nome' => 'Coqueiro Seco',
-                'estado_id' => '2',
+                'title' => 'Coqueiro Seco',
+                'state_id' => '2',
             ),
             123 =>
             array (
                 'id' => '124',
-                'nome' => 'Coruripe',
-                'estado_id' => '2',
+                'title' => 'Coruripe',
+                'state_id' => '2',
             ),
             124 =>
             array (
                 'id' => '125',
-                'nome' => 'Craíbas',
-                'estado_id' => '2',
+                'title' => 'Craíbas',
+                'state_id' => '2',
             ),
             125 =>
             array (
                 'id' => '126',
-                'nome' => 'Delmiro Gouveia',
-                'estado_id' => '2',
+                'title' => 'Delmiro Gouveia',
+                'state_id' => '2',
             ),
             126 =>
             array (
                 'id' => '127',
-                'nome' => 'Dois Riachos',
-                'estado_id' => '2',
+                'title' => 'Dois Riachos',
+                'state_id' => '2',
             ),
             127 =>
             array (
                 'id' => '128',
-                'nome' => 'Estrela de Alagoas',
-                'estado_id' => '2',
+                'title' => 'Estrela de Alagoas',
+                'state_id' => '2',
             ),
             128 =>
             array (
                 'id' => '129',
-                'nome' => 'Feira Grande',
-                'estado_id' => '2',
+                'title' => 'Feira Grande',
+                'state_id' => '2',
             ),
             129 =>
             array (
                 'id' => '130',
-                'nome' => 'Feliz Deserto',
-                'estado_id' => '2',
+                'title' => 'Feliz Deserto',
+                'state_id' => '2',
             ),
             130 =>
             array (
                 'id' => '131',
-                'nome' => 'Flexeiras',
-                'estado_id' => '2',
+                'title' => 'Flexeiras',
+                'state_id' => '2',
             ),
             131 =>
             array (
                 'id' => '132',
-                'nome' => 'Girau do Ponciano',
-                'estado_id' => '2',
+                'title' => 'Girau do Ponciano',
+                'state_id' => '2',
             ),
             132 =>
             array (
                 'id' => '133',
-                'nome' => 'Ibateguara',
-                'estado_id' => '2',
+                'title' => 'Ibateguara',
+                'state_id' => '2',
             ),
             133 =>
             array (
                 'id' => '134',
-                'nome' => 'Igaci',
-                'estado_id' => '2',
+                'title' => 'Igaci',
+                'state_id' => '2',
             ),
             134 =>
             array (
                 'id' => '135',
-                'nome' => 'Igreja Nova',
-                'estado_id' => '2',
+                'title' => 'Igreja Nova',
+                'state_id' => '2',
             ),
             135 =>
             array (
                 'id' => '136',
-                'nome' => 'Inhapi',
-                'estado_id' => '2',
+                'title' => 'Inhapi',
+                'state_id' => '2',
             ),
             136 =>
             array (
                 'id' => '137',
-                'nome' => 'Jacaré dos Homens',
-                'estado_id' => '2',
+                'title' => 'Jacaré dos Homens',
+                'state_id' => '2',
             ),
             137 =>
             array (
                 'id' => '138',
-                'nome' => 'Jacuípe',
-                'estado_id' => '2',
+                'title' => 'Jacuípe',
+                'state_id' => '2',
             ),
             138 =>
             array (
                 'id' => '139',
-                'nome' => 'Japaratinga',
-                'estado_id' => '2',
+                'title' => 'Japaratinga',
+                'state_id' => '2',
             ),
             139 =>
             array (
                 'id' => '140',
-                'nome' => 'Jaramataia',
-                'estado_id' => '2',
+                'title' => 'Jaramataia',
+                'state_id' => '2',
             ),
             140 =>
             array (
                 'id' => '141',
-                'nome' => 'Jequiá da Praia',
-                'estado_id' => '2',
+                'title' => 'Jequiá da Praia',
+                'state_id' => '2',
             ),
             141 =>
             array (
                 'id' => '142',
-                'nome' => 'Joaquim Gomes',
-                'estado_id' => '2',
+                'title' => 'Joaquim Gomes',
+                'state_id' => '2',
             ),
             142 =>
             array (
                 'id' => '143',
-                'nome' => 'Jundiá',
-                'estado_id' => '2',
+                'title' => 'Jundiá',
+                'state_id' => '2',
             ),
             143 =>
             array (
                 'id' => '144',
-                'nome' => 'Junqueiro',
-                'estado_id' => '2',
+                'title' => 'Junqueiro',
+                'state_id' => '2',
             ),
             144 =>
             array (
                 'id' => '145',
-                'nome' => 'Lagoa da Canoa',
-                'estado_id' => '2',
+                'title' => 'Lagoa da Canoa',
+                'state_id' => '2',
             ),
             145 =>
             array (
                 'id' => '146',
-                'nome' => 'Limoeiro de Anadia',
-                'estado_id' => '2',
+                'title' => 'Limoeiro de Anadia',
+                'state_id' => '2',
             ),
             146 =>
             array (
                 'id' => '147',
-                'nome' => 'Maceió',
-                'estado_id' => '2',
+                'title' => 'Maceió',
+                'state_id' => '2',
             ),
             147 =>
             array (
                 'id' => '148',
-                'nome' => 'Major Isidoro',
-                'estado_id' => '2',
+                'title' => 'Major Isidoro',
+                'state_id' => '2',
             ),
             148 =>
             array (
                 'id' => '149',
-                'nome' => 'Mar Vermelho',
-                'estado_id' => '2',
+                'title' => 'Mar Vermelho',
+                'state_id' => '2',
             ),
             149 =>
             array (
                 'id' => '150',
-                'nome' => 'Maragogi',
-                'estado_id' => '2',
+                'title' => 'Maragogi',
+                'state_id' => '2',
             ),
             150 =>
             array (
                 'id' => '151',
-                'nome' => 'Maravilha',
-                'estado_id' => '2',
+                'title' => 'Maravilha',
+                'state_id' => '2',
             ),
             151 =>
             array (
                 'id' => '152',
-                'nome' => 'Marechal Deodoro',
-                'estado_id' => '2',
+                'title' => 'Marechal Deodoro',
+                'state_id' => '2',
             ),
             152 =>
             array (
                 'id' => '153',
-                'nome' => 'Maribondo',
-                'estado_id' => '2',
+                'title' => 'Maribondo',
+                'state_id' => '2',
             ),
             153 =>
             array (
                 'id' => '154',
-                'nome' => 'Mata Grande',
-                'estado_id' => '2',
+                'title' => 'Mata Grande',
+                'state_id' => '2',
             ),
             154 =>
             array (
                 'id' => '155',
-                'nome' => 'Matriz de Camaragibe',
-                'estado_id' => '2',
+                'title' => 'Matriz de Camaragibe',
+                'state_id' => '2',
             ),
             155 =>
             array (
                 'id' => '156',
-                'nome' => 'Messias',
-                'estado_id' => '2',
+                'title' => 'Messias',
+                'state_id' => '2',
             ),
             156 =>
             array (
                 'id' => '157',
-                'nome' => 'Minador do Negrão',
-                'estado_id' => '2',
+                'title' => 'Minador do Negrão',
+                'state_id' => '2',
             ),
             157 =>
             array (
                 'id' => '158',
-                'nome' => 'Monteirópolis',
-                'estado_id' => '2',
+                'title' => 'Monteirópolis',
+                'state_id' => '2',
             ),
             158 =>
             array (
                 'id' => '159',
-                'nome' => 'Murici',
-                'estado_id' => '2',
+                'title' => 'Murici',
+                'state_id' => '2',
             ),
             159 =>
             array (
                 'id' => '160',
-                'nome' => 'Novo Lino',
-                'estado_id' => '2',
+                'title' => 'Novo Lino',
+                'state_id' => '2',
             ),
             160 =>
             array (
                 'id' => '161',
-                'nome' => 'Olho d`Água das Flores',
-                'estado_id' => '2',
+                'title' => 'Olho d`Água das Flores',
+                'state_id' => '2',
             ),
             161 =>
             array (
                 'id' => '162',
-                'nome' => 'Olho d`Água do Casado',
-                'estado_id' => '2',
+                'title' => 'Olho d`Água do Casado',
+                'state_id' => '2',
             ),
             162 =>
             array (
                 'id' => '163',
-                'nome' => 'Olho d`Água Grande',
-                'estado_id' => '2',
+                'title' => 'Olho d`Água Grande',
+                'state_id' => '2',
             ),
             163 =>
             array (
                 'id' => '164',
-                'nome' => 'Olivença',
-                'estado_id' => '2',
+                'title' => 'Olivença',
+                'state_id' => '2',
             ),
             164 =>
             array (
                 'id' => '165',
-                'nome' => 'Ouro Branco',
-                'estado_id' => '2',
+                'title' => 'Ouro Branco',
+                'state_id' => '2',
             ),
             165 =>
             array (
                 'id' => '166',
-                'nome' => 'Palestina',
-                'estado_id' => '2',
+                'title' => 'Palestina',
+                'state_id' => '2',
             ),
             166 =>
             array (
                 'id' => '167',
-                'nome' => 'Palmeira dos Índios',
-                'estado_id' => '2',
+                'title' => 'Palmeira dos Índios',
+                'state_id' => '2',
             ),
             167 =>
             array (
                 'id' => '168',
-                'nome' => 'Pão de Açúcar',
-                'estado_id' => '2',
+                'title' => 'Pão de Açúcar',
+                'state_id' => '2',
             ),
             168 =>
             array (
                 'id' => '169',
-                'nome' => 'Pariconha',
-                'estado_id' => '2',
+                'title' => 'Pariconha',
+                'state_id' => '2',
             ),
             169 =>
             array (
                 'id' => '170',
-                'nome' => 'Paripueira',
-                'estado_id' => '2',
+                'title' => 'Paripueira',
+                'state_id' => '2',
             ),
             170 =>
             array (
                 'id' => '171',
-                'nome' => 'Passo de Camaragibe',
-                'estado_id' => '2',
+                'title' => 'Passo de Camaragibe',
+                'state_id' => '2',
             ),
             171 =>
             array (
                 'id' => '172',
-                'nome' => 'Paulo Jacinto',
-                'estado_id' => '2',
+                'title' => 'Paulo Jacinto',
+                'state_id' => '2',
             ),
             172 =>
             array (
                 'id' => '173',
-                'nome' => 'Penedo',
-                'estado_id' => '2',
+                'title' => 'Penedo',
+                'state_id' => '2',
             ),
             173 =>
             array (
                 'id' => '174',
-                'nome' => 'Piaçabuçu',
-                'estado_id' => '2',
+                'title' => 'Piaçabuçu',
+                'state_id' => '2',
             ),
             174 =>
             array (
                 'id' => '175',
-                'nome' => 'Pilar',
-                'estado_id' => '2',
+                'title' => 'Pilar',
+                'state_id' => '2',
             ),
             175 =>
             array (
                 'id' => '176',
-                'nome' => 'Pindoba',
-                'estado_id' => '2',
+                'title' => 'Pindoba',
+                'state_id' => '2',
             ),
             176 =>
             array (
                 'id' => '177',
-                'nome' => 'Piranhas',
-                'estado_id' => '2',
+                'title' => 'Piranhas',
+                'state_id' => '2',
             ),
             177 =>
             array (
                 'id' => '178',
-                'nome' => 'Poço das Trincheiras',
-                'estado_id' => '2',
+                'title' => 'Poço das Trincheiras',
+                'state_id' => '2',
             ),
             178 =>
             array (
                 'id' => '179',
-                'nome' => 'Porto Calvo',
-                'estado_id' => '2',
+                'title' => 'Porto Calvo',
+                'state_id' => '2',
             ),
             179 =>
             array (
                 'id' => '180',
-                'nome' => 'Porto de Pedras',
-                'estado_id' => '2',
+                'title' => 'Porto de Pedras',
+                'state_id' => '2',
             ),
             180 =>
             array (
                 'id' => '181',
-                'nome' => 'Porto Real do Colégio',
-                'estado_id' => '2',
+                'title' => 'Porto Real do Colégio',
+                'state_id' => '2',
             ),
             181 =>
             array (
                 'id' => '182',
-                'nome' => 'Quebrangulo',
-                'estado_id' => '2',
+                'title' => 'Quebrangulo',
+                'state_id' => '2',
             ),
             182 =>
             array (
                 'id' => '183',
-                'nome' => 'Rio Largo',
-                'estado_id' => '2',
+                'title' => 'Rio Largo',
+                'state_id' => '2',
             ),
             183 =>
             array (
                 'id' => '184',
-                'nome' => 'Roteiro',
-                'estado_id' => '2',
+                'title' => 'Roteiro',
+                'state_id' => '2',
             ),
             184 =>
             array (
                 'id' => '185',
-                'nome' => 'Santa Luzia do Norte',
-                'estado_id' => '2',
+                'title' => 'Santa Luzia do Norte',
+                'state_id' => '2',
             ),
             185 =>
             array (
                 'id' => '186',
-                'nome' => 'Santana do Ipanema',
-                'estado_id' => '2',
+                'title' => 'Santana do Ipanema',
+                'state_id' => '2',
             ),
             186 =>
             array (
                 'id' => '187',
-                'nome' => 'Santana do Mundaú',
-                'estado_id' => '2',
+                'title' => 'Santana do Mundaú',
+                'state_id' => '2',
             ),
             187 =>
             array (
                 'id' => '188',
-                'nome' => 'São Brás',
-                'estado_id' => '2',
+                'title' => 'São Brás',
+                'state_id' => '2',
             ),
             188 =>
             array (
                 'id' => '189',
-                'nome' => 'São José da Laje',
-                'estado_id' => '2',
+                'title' => 'São José da Laje',
+                'state_id' => '2',
             ),
             189 =>
             array (
                 'id' => '190',
-                'nome' => 'São José da Tapera',
-                'estado_id' => '2',
+                'title' => 'São José da Tapera',
+                'state_id' => '2',
             ),
             190 =>
             array (
                 'id' => '191',
-                'nome' => 'São Luís do Quitunde',
-                'estado_id' => '2',
+                'title' => 'São Luís do Quitunde',
+                'state_id' => '2',
             ),
             191 =>
             array (
                 'id' => '192',
-                'nome' => 'São Miguel dos Campos',
-                'estado_id' => '2',
+                'title' => 'São Miguel dos Campos',
+                'state_id' => '2',
             ),
             192 =>
             array (
                 'id' => '193',
-                'nome' => 'São Miguel dos Milagres',
-                'estado_id' => '2',
+                'title' => 'São Miguel dos Milagres',
+                'state_id' => '2',
             ),
             193 =>
             array (
                 'id' => '194',
-                'nome' => 'São Sebastião',
-                'estado_id' => '2',
+                'title' => 'São Sebastião',
+                'state_id' => '2',
             ),
             194 =>
             array (
                 'id' => '195',
-                'nome' => 'Satuba',
-                'estado_id' => '2',
+                'title' => 'Satuba',
+                'state_id' => '2',
             ),
             195 =>
             array (
                 'id' => '196',
-                'nome' => 'Senador Rui Palmeira',
-                'estado_id' => '2',
+                'title' => 'Senador Rui Palmeira',
+                'state_id' => '2',
             ),
             196 =>
             array (
                 'id' => '197',
-                'nome' => 'Tanque d`Arca',
-                'estado_id' => '2',
+                'title' => 'Tanque d`Arca',
+                'state_id' => '2',
             ),
             197 =>
             array (
                 'id' => '198',
-                'nome' => 'Taquarana',
-                'estado_id' => '2',
+                'title' => 'Taquarana',
+                'state_id' => '2',
             ),
             198 =>
             array (
                 'id' => '199',
-                'nome' => 'Teotônio Vilela',
-                'estado_id' => '2',
+                'title' => 'Teotônio Vilela',
+                'state_id' => '2',
             ),
             199 =>
             array (
                 'id' => '200',
-                'nome' => 'Traipu',
-                'estado_id' => '2',
+                'title' => 'Traipu',
+                'state_id' => '2',
             ),
             200 =>
             array (
                 'id' => '201',
-                'nome' => 'União dos Palmares',
-                'estado_id' => '2',
+                'title' => 'União dos Palmares',
+                'state_id' => '2',
             ),
             201 =>
             array (
                 'id' => '202',
-                'nome' => 'Viçosa',
-                'estado_id' => '2',
+                'title' => 'Viçosa',
+                'state_id' => '2',
             ),
             202 =>
             array (
                 'id' => '203',
-                'nome' => 'Amapá',
-                'estado_id' => '4',
+                'title' => 'Amapá',
+                'state_id' => '4',
             ),
             203 =>
             array (
                 'id' => '204',
-                'nome' => 'Calçoene',
-                'estado_id' => '4',
+                'title' => 'Calçoene',
+                'state_id' => '4',
             ),
             204 =>
             array (
                 'id' => '205',
-                'nome' => 'Cutias',
-                'estado_id' => '4',
+                'title' => 'Cutias',
+                'state_id' => '4',
             ),
             205 =>
             array (
                 'id' => '206',
-                'nome' => 'Ferreira Gomes',
-                'estado_id' => '4',
+                'title' => 'Ferreira Gomes',
+                'state_id' => '4',
             ),
             206 =>
             array (
                 'id' => '207',
-                'nome' => 'Itaubal',
-                'estado_id' => '4',
+                'title' => 'Itaubal',
+                'state_id' => '4',
             ),
             207 =>
             array (
                 'id' => '208',
-                'nome' => 'Laranjal do Jari',
-                'estado_id' => '4',
+                'title' => 'Laranjal do Jari',
+                'state_id' => '4',
             ),
             208 =>
             array (
                 'id' => '209',
-                'nome' => 'Macapá',
-                'estado_id' => '4',
+                'title' => 'Macapá',
+                'state_id' => '4',
             ),
             209 =>
             array (
                 'id' => '210',
-                'nome' => 'Mazagão',
-                'estado_id' => '4',
+                'title' => 'Mazagão',
+                'state_id' => '4',
             ),
             210 =>
             array (
                 'id' => '211',
-                'nome' => 'Oiapoque',
-                'estado_id' => '4',
+                'title' => 'Oiapoque',
+                'state_id' => '4',
             ),
             211 =>
             array (
                 'id' => '212',
-                'nome' => 'Pedra Branca do Amaparí',
-                'estado_id' => '4',
+                'title' => 'Pedra Branca do Amaparí',
+                'state_id' => '4',
             ),
             212 =>
             array (
                 'id' => '213',
-                'nome' => 'Porto Grande',
-                'estado_id' => '4',
+                'title' => 'Porto Grande',
+                'state_id' => '4',
             ),
             213 =>
             array (
                 'id' => '214',
-                'nome' => 'Pracuúba',
-                'estado_id' => '4',
+                'title' => 'Pracuúba',
+                'state_id' => '4',
             ),
             214 =>
             array (
                 'id' => '215',
-                'nome' => 'Santana',
-                'estado_id' => '4',
+                'title' => 'Santana',
+                'state_id' => '4',
             ),
             215 =>
             array (
                 'id' => '216',
-                'nome' => 'Serra do Navio',
-                'estado_id' => '4',
+                'title' => 'Serra do Navio',
+                'state_id' => '4',
             ),
             216 =>
             array (
                 'id' => '217',
-                'nome' => 'Tartarugalzinho',
-                'estado_id' => '4',
+                'title' => 'Tartarugalzinho',
+                'state_id' => '4',
             ),
             217 =>
             array (
                 'id' => '218',
-                'nome' => 'Vitória do Jari',
-                'estado_id' => '4',
+                'title' => 'Vitória do Jari',
+                'state_id' => '4',
             ),
             218 =>
             array (
                 'id' => '219',
-                'nome' => 'Alvarães',
-                'estado_id' => '3',
+                'title' => 'Alvarães',
+                'state_id' => '3',
             ),
             219 =>
             array (
                 'id' => '220',
-                'nome' => 'Amaturá',
-                'estado_id' => '3',
+                'title' => 'Amaturá',
+                'state_id' => '3',
             ),
             220 =>
             array (
                 'id' => '221',
-                'nome' => 'Anamã',
-                'estado_id' => '3',
+                'title' => 'Anamã',
+                'state_id' => '3',
             ),
             221 =>
             array (
                 'id' => '222',
-                'nome' => 'Anori',
-                'estado_id' => '3',
+                'title' => 'Anori',
+                'state_id' => '3',
             ),
             222 =>
             array (
                 'id' => '223',
-                'nome' => 'Apuí',
-                'estado_id' => '3',
+                'title' => 'Apuí',
+                'state_id' => '3',
             ),
             223 =>
             array (
                 'id' => '224',
-                'nome' => 'Atalaia do Norte',
-                'estado_id' => '3',
+                'title' => 'Atalaia do Norte',
+                'state_id' => '3',
             ),
             224 =>
             array (
                 'id' => '225',
-                'nome' => 'Autazes',
-                'estado_id' => '3',
+                'title' => 'Autazes',
+                'state_id' => '3',
             ),
             225 =>
             array (
                 'id' => '226',
-                'nome' => 'Barcelos',
-                'estado_id' => '3',
+                'title' => 'Barcelos',
+                'state_id' => '3',
             ),
             226 =>
             array (
                 'id' => '227',
-                'nome' => 'Barreirinha',
-                'estado_id' => '3',
+                'title' => 'Barreirinha',
+                'state_id' => '3',
             ),
             227 =>
             array (
                 'id' => '228',
-                'nome' => 'Benjamin Constant',
-                'estado_id' => '3',
+                'title' => 'Benjamin Constant',
+                'state_id' => '3',
             ),
             228 =>
             array (
                 'id' => '229',
-                'nome' => 'Beruri',
-                'estado_id' => '3',
+                'title' => 'Beruri',
+                'state_id' => '3',
             ),
             229 =>
             array (
                 'id' => '230',
-                'nome' => 'Boa Vista do Ramos',
-                'estado_id' => '3',
+                'title' => 'Boa Vista do Ramos',
+                'state_id' => '3',
             ),
             230 =>
             array (
                 'id' => '231',
-                'nome' => 'Boca do Acre',
-                'estado_id' => '3',
+                'title' => 'Boca do Acre',
+                'state_id' => '3',
             ),
             231 =>
             array (
                 'id' => '232',
-                'nome' => 'Borba',
-                'estado_id' => '3',
+                'title' => 'Borba',
+                'state_id' => '3',
             ),
             232 =>
             array (
                 'id' => '233',
-                'nome' => 'Caapiranga',
-                'estado_id' => '3',
+                'title' => 'Caapiranga',
+                'state_id' => '3',
             ),
             233 =>
             array (
                 'id' => '234',
-                'nome' => 'Canutama',
-                'estado_id' => '3',
+                'title' => 'Canutama',
+                'state_id' => '3',
             ),
             234 =>
             array (
                 'id' => '235',
-                'nome' => 'Carauari',
-                'estado_id' => '3',
+                'title' => 'Carauari',
+                'state_id' => '3',
             ),
             235 =>
             array (
                 'id' => '236',
-                'nome' => 'Careiro',
-                'estado_id' => '3',
+                'title' => 'Careiro',
+                'state_id' => '3',
             ),
             236 =>
             array (
                 'id' => '237',
-                'nome' => 'Careiro da Várzea',
-                'estado_id' => '3',
+                'title' => 'Careiro da Várzea',
+                'state_id' => '3',
             ),
             237 =>
             array (
                 'id' => '238',
-                'nome' => 'Coari',
-                'estado_id' => '3',
+                'title' => 'Coari',
+                'state_id' => '3',
             ),
             238 =>
             array (
                 'id' => '239',
-                'nome' => 'Codajás',
-                'estado_id' => '3',
+                'title' => 'Codajás',
+                'state_id' => '3',
             ),
             239 =>
             array (
                 'id' => '240',
-                'nome' => 'Eirunepé',
-                'estado_id' => '3',
+                'title' => 'Eirunepé',
+                'state_id' => '3',
             ),
             240 =>
             array (
                 'id' => '241',
-                'nome' => 'Envira',
-                'estado_id' => '3',
+                'title' => 'Envira',
+                'state_id' => '3',
             ),
             241 =>
             array (
                 'id' => '242',
-                'nome' => 'Fonte Boa',
-                'estado_id' => '3',
+                'title' => 'Fonte Boa',
+                'state_id' => '3',
             ),
             242 =>
             array (
                 'id' => '243',
-                'nome' => 'Guajará',
-                'estado_id' => '3',
+                'title' => 'Guajará',
+                'state_id' => '3',
             ),
             243 =>
             array (
                 'id' => '244',
-                'nome' => 'Humaitá',
-                'estado_id' => '3',
+                'title' => 'Humaitá',
+                'state_id' => '3',
             ),
             244 =>
             array (
                 'id' => '245',
-                'nome' => 'Ipixuna',
-                'estado_id' => '3',
+                'title' => 'Ipixuna',
+                'state_id' => '3',
             ),
             245 =>
             array (
                 'id' => '246',
-                'nome' => 'Iranduba',
-                'estado_id' => '3',
+                'title' => 'Iranduba',
+                'state_id' => '3',
             ),
             246 =>
             array (
                 'id' => '247',
-                'nome' => 'Itacoatiara',
-                'estado_id' => '3',
+                'title' => 'Itacoatiara',
+                'state_id' => '3',
             ),
             247 =>
             array (
                 'id' => '248',
-                'nome' => 'Itamarati',
-                'estado_id' => '3',
+                'title' => 'Itamarati',
+                'state_id' => '3',
             ),
             248 =>
             array (
                 'id' => '249',
-                'nome' => 'Itapiranga',
-                'estado_id' => '3',
+                'title' => 'Itapiranga',
+                'state_id' => '3',
             ),
             249 =>
             array (
                 'id' => '250',
-                'nome' => 'Japurá',
-                'estado_id' => '3',
+                'title' => 'Japurá',
+                'state_id' => '3',
             ),
             250 =>
             array (
                 'id' => '251',
-                'nome' => 'Juruá',
-                'estado_id' => '3',
+                'title' => 'Juruá',
+                'state_id' => '3',
             ),
             251 =>
             array (
                 'id' => '252',
-                'nome' => 'Jutaí',
-                'estado_id' => '3',
+                'title' => 'Jutaí',
+                'state_id' => '3',
             ),
             252 =>
             array (
                 'id' => '253',
-                'nome' => 'Lábrea',
-                'estado_id' => '3',
+                'title' => 'Lábrea',
+                'state_id' => '3',
             ),
             253 =>
             array (
                 'id' => '254',
-                'nome' => 'Manacapuru',
-                'estado_id' => '3',
+                'title' => 'Manacapuru',
+                'state_id' => '3',
             ),
             254 =>
             array (
                 'id' => '255',
-                'nome' => 'Manaquiri',
-                'estado_id' => '3',
+                'title' => 'Manaquiri',
+                'state_id' => '3',
             ),
             255 =>
             array (
                 'id' => '256',
-                'nome' => 'Manaus',
-                'estado_id' => '3',
+                'title' => 'Manaus',
+                'state_id' => '3',
             ),
             256 =>
             array (
                 'id' => '257',
-                'nome' => 'Manicoré',
-                'estado_id' => '3',
+                'title' => 'Manicoré',
+                'state_id' => '3',
             ),
             257 =>
             array (
                 'id' => '258',
-                'nome' => 'Maraã',
-                'estado_id' => '3',
+                'title' => 'Maraã',
+                'state_id' => '3',
             ),
             258 =>
             array (
                 'id' => '259',
-                'nome' => 'Maués',
-                'estado_id' => '3',
+                'title' => 'Maués',
+                'state_id' => '3',
             ),
             259 =>
             array (
                 'id' => '260',
-                'nome' => 'Nhamundá',
-                'estado_id' => '3',
+                'title' => 'Nhamundá',
+                'state_id' => '3',
             ),
             260 =>
             array (
                 'id' => '261',
-                'nome' => 'Nova Olinda do Norte',
-                'estado_id' => '3',
+                'title' => 'Nova Olinda do Norte',
+                'state_id' => '3',
             ),
             261 =>
             array (
                 'id' => '262',
-                'nome' => 'Novo Airão',
-                'estado_id' => '3',
+                'title' => 'Novo Airão',
+                'state_id' => '3',
             ),
             262 =>
             array (
                 'id' => '263',
-                'nome' => 'Novo Aripuanã',
-                'estado_id' => '3',
+                'title' => 'Novo Aripuanã',
+                'state_id' => '3',
             ),
             263 =>
             array (
                 'id' => '264',
-                'nome' => 'Parintins',
-                'estado_id' => '3',
+                'title' => 'Parintins',
+                'state_id' => '3',
             ),
             264 =>
             array (
                 'id' => '265',
-                'nome' => 'Pauini',
-                'estado_id' => '3',
+                'title' => 'Pauini',
+                'state_id' => '3',
             ),
             265 =>
             array (
                 'id' => '266',
-                'nome' => 'Presidente Figueiredo',
-                'estado_id' => '3',
+                'title' => 'Presidente Figueiredo',
+                'state_id' => '3',
             ),
             266 =>
             array (
                 'id' => '267',
-                'nome' => 'Rio Preto da Eva',
-                'estado_id' => '3',
+                'title' => 'Rio Preto da Eva',
+                'state_id' => '3',
             ),
             267 =>
             array (
                 'id' => '268',
-                'nome' => 'Santa Isabel do Rio Negro',
-                'estado_id' => '3',
+                'title' => 'Santa Isabel do Rio Negro',
+                'state_id' => '3',
             ),
             268 =>
             array (
                 'id' => '269',
-                'nome' => 'Santo Antônio do Içá',
-                'estado_id' => '3',
+                'title' => 'Santo Antônio do Içá',
+                'state_id' => '3',
             ),
             269 =>
             array (
                 'id' => '270',
-                'nome' => 'São Gabriel da Cachoeira',
-                'estado_id' => '3',
+                'title' => 'São Gabriel da Cachoeira',
+                'state_id' => '3',
             ),
             270 =>
             array (
                 'id' => '271',
-                'nome' => 'São Paulo de Olivença',
-                'estado_id' => '3',
+                'title' => 'São Paulo de Olivença',
+                'state_id' => '3',
             ),
             271 =>
             array (
                 'id' => '272',
-                'nome' => 'São Sebastião do Uatumã',
-                'estado_id' => '3',
+                'title' => 'São Sebastião do Uatumã',
+                'state_id' => '3',
             ),
             272 =>
             array (
                 'id' => '273',
-                'nome' => 'Silves',
-                'estado_id' => '3',
+                'title' => 'Silves',
+                'state_id' => '3',
             ),
             273 =>
             array (
                 'id' => '274',
-                'nome' => 'Tabatinga',
-                'estado_id' => '3',
+                'title' => 'Tabatinga',
+                'state_id' => '3',
             ),
             274 =>
             array (
                 'id' => '275',
-                'nome' => 'Tapauá',
-                'estado_id' => '3',
+                'title' => 'Tapauá',
+                'state_id' => '3',
             ),
             275 =>
             array (
                 'id' => '276',
-                'nome' => 'Tefé',
-                'estado_id' => '3',
+                'title' => 'Tefé',
+                'state_id' => '3',
             ),
             276 =>
             array (
                 'id' => '277',
-                'nome' => 'Tonantins',
-                'estado_id' => '3',
+                'title' => 'Tonantins',
+                'state_id' => '3',
             ),
             277 =>
             array (
                 'id' => '278',
-                'nome' => 'Uarini',
-                'estado_id' => '3',
+                'title' => 'Uarini',
+                'state_id' => '3',
             ),
             278 =>
             array (
                 'id' => '279',
-                'nome' => 'Urucará',
-                'estado_id' => '3',
+                'title' => 'Urucará',
+                'state_id' => '3',
             ),
             279 =>
             array (
                 'id' => '280',
-                'nome' => 'Urucurituba',
-                'estado_id' => '3',
+                'title' => 'Urucurituba',
+                'state_id' => '3',
             ),
             280 =>
             array (
                 'id' => '281',
-                'nome' => 'Abaíra',
-                'estado_id' => '5',
+                'title' => 'Abaíra',
+                'state_id' => '5',
             ),
             281 =>
             array (
                 'id' => '282',
-                'nome' => 'Abaré',
-                'estado_id' => '5',
+                'title' => 'Abaré',
+                'state_id' => '5',
             ),
             282 =>
             array (
                 'id' => '283',
-                'nome' => 'Acajutiba',
-                'estado_id' => '5',
+                'title' => 'Acajutiba',
+                'state_id' => '5',
             ),
             283 =>
             array (
                 'id' => '284',
-                'nome' => 'Adustina',
-                'estado_id' => '5',
+                'title' => 'Adustina',
+                'state_id' => '5',
             ),
             284 =>
             array (
                 'id' => '285',
-                'nome' => 'Água Fria',
-                'estado_id' => '5',
+                'title' => 'Água Fria',
+                'state_id' => '5',
             ),
             285 =>
             array (
                 'id' => '286',
-                'nome' => 'Aiquara',
-                'estado_id' => '5',
+                'title' => 'Aiquara',
+                'state_id' => '5',
             ),
             286 =>
             array (
                 'id' => '287',
-                'nome' => 'Alagoinhas',
-                'estado_id' => '5',
+                'title' => 'Alagoinhas',
+                'state_id' => '5',
             ),
             287 =>
             array (
                 'id' => '288',
-                'nome' => 'Alcobaça',
-                'estado_id' => '5',
+                'title' => 'Alcobaça',
+                'state_id' => '5',
             ),
             288 =>
             array (
                 'id' => '289',
-                'nome' => 'Almadina',
-                'estado_id' => '5',
+                'title' => 'Almadina',
+                'state_id' => '5',
             ),
             289 =>
             array (
                 'id' => '290',
-                'nome' => 'Amargosa',
-                'estado_id' => '5',
+                'title' => 'Amargosa',
+                'state_id' => '5',
             ),
             290 =>
             array (
                 'id' => '291',
-                'nome' => 'Amélia Rodrigues',
-                'estado_id' => '5',
+                'title' => 'Amélia Rodrigues',
+                'state_id' => '5',
             ),
             291 =>
             array (
                 'id' => '292',
-                'nome' => 'América Dourada',
-                'estado_id' => '5',
+                'title' => 'América Dourada',
+                'state_id' => '5',
             ),
             292 =>
             array (
                 'id' => '293',
-                'nome' => 'Anagé',
-                'estado_id' => '5',
+                'title' => 'Anagé',
+                'state_id' => '5',
             ),
             293 =>
             array (
                 'id' => '294',
-                'nome' => 'Andaraí',
-                'estado_id' => '5',
+                'title' => 'Andaraí',
+                'state_id' => '5',
             ),
             294 =>
             array (
                 'id' => '295',
-                'nome' => 'Andorinha',
-                'estado_id' => '5',
+                'title' => 'Andorinha',
+                'state_id' => '5',
             ),
             295 =>
             array (
                 'id' => '296',
-                'nome' => 'Angical',
-                'estado_id' => '5',
+                'title' => 'Angical',
+                'state_id' => '5',
             ),
             296 =>
             array (
                 'id' => '297',
-                'nome' => 'Anguera',
-                'estado_id' => '5',
+                'title' => 'Anguera',
+                'state_id' => '5',
             ),
             297 =>
             array (
                 'id' => '298',
-                'nome' => 'Antas',
-                'estado_id' => '5',
+                'title' => 'Antas',
+                'state_id' => '5',
             ),
             298 =>
             array (
                 'id' => '299',
-                'nome' => 'Antônio Cardoso',
-                'estado_id' => '5',
+                'title' => 'Antônio Cardoso',
+                'state_id' => '5',
             ),
             299 =>
             array (
                 'id' => '300',
-                'nome' => 'Antônio Gonçalves',
-                'estado_id' => '5',
+                'title' => 'Antônio Gonçalves',
+                'state_id' => '5',
             ),
             300 =>
             array (
                 'id' => '301',
-                'nome' => 'Aporá',
-                'estado_id' => '5',
+                'title' => 'Aporá',
+                'state_id' => '5',
             ),
             301 =>
             array (
                 'id' => '302',
-                'nome' => 'Apuarema',
-                'estado_id' => '5',
+                'title' => 'Apuarema',
+                'state_id' => '5',
             ),
             302 =>
             array (
                 'id' => '303',
-                'nome' => 'Araças',
-                'estado_id' => '5',
+                'title' => 'Araças',
+                'state_id' => '5',
             ),
             303 =>
             array (
                 'id' => '304',
-                'nome' => 'Aracatu',
-                'estado_id' => '5',
+                'title' => 'Aracatu',
+                'state_id' => '5',
             ),
             304 =>
             array (
                 'id' => '305',
-                'nome' => 'Araci',
-                'estado_id' => '5',
+                'title' => 'Araci',
+                'state_id' => '5',
             ),
             305 =>
             array (
                 'id' => '306',
-                'nome' => 'Aramari',
-                'estado_id' => '5',
+                'title' => 'Aramari',
+                'state_id' => '5',
             ),
             306 =>
             array (
                 'id' => '307',
-                'nome' => 'Arataca',
-                'estado_id' => '5',
+                'title' => 'Arataca',
+                'state_id' => '5',
             ),
             307 =>
             array (
                 'id' => '308',
-                'nome' => 'Aratuípe',
-                'estado_id' => '5',
+                'title' => 'Aratuípe',
+                'state_id' => '5',
             ),
             308 =>
             array (
                 'id' => '309',
-                'nome' => 'Aurelino Leal',
-                'estado_id' => '5',
+                'title' => 'Aurelino Leal',
+                'state_id' => '5',
             ),
             309 =>
             array (
                 'id' => '310',
-                'nome' => 'Baianópolis',
-                'estado_id' => '5',
+                'title' => 'Baianópolis',
+                'state_id' => '5',
             ),
             310 =>
             array (
                 'id' => '311',
-                'nome' => 'Baixa Grande',
-                'estado_id' => '5',
+                'title' => 'Baixa Grande',
+                'state_id' => '5',
             ),
             311 =>
             array (
                 'id' => '312',
-                'nome' => 'Banzaê',
-                'estado_id' => '5',
+                'title' => 'Banzaê',
+                'state_id' => '5',
             ),
             312 =>
             array (
                 'id' => '313',
-                'nome' => 'Barra',
-                'estado_id' => '5',
+                'title' => 'Barra',
+                'state_id' => '5',
             ),
             313 =>
             array (
                 'id' => '314',
-                'nome' => 'Barra da Estiva',
-                'estado_id' => '5',
+                'title' => 'Barra da Estiva',
+                'state_id' => '5',
             ),
             314 =>
             array (
                 'id' => '315',
-                'nome' => 'Barra do Choça',
-                'estado_id' => '5',
+                'title' => 'Barra do Choça',
+                'state_id' => '5',
             ),
             315 =>
             array (
                 'id' => '316',
-                'nome' => 'Barra do Mendes',
-                'estado_id' => '5',
+                'title' => 'Barra do Mendes',
+                'state_id' => '5',
             ),
             316 =>
             array (
                 'id' => '317',
-                'nome' => 'Barra do Rocha',
-                'estado_id' => '5',
+                'title' => 'Barra do Rocha',
+                'state_id' => '5',
             ),
             317 =>
             array (
                 'id' => '318',
-                'nome' => 'Barreiras',
-                'estado_id' => '5',
+                'title' => 'Barreiras',
+                'state_id' => '5',
             ),
             318 =>
             array (
                 'id' => '319',
-                'nome' => 'Barro Alto',
-                'estado_id' => '5',
+                'title' => 'Barro Alto',
+                'state_id' => '5',
             ),
             319 =>
             array (
                 'id' => '320',
-            'nome' => 'Barro Preto (antigo Gov. Lomanto Jr.)',
-                'estado_id' => '5',
+            'title' => 'Barro Preto (antigo Gov. Lomanto Jr.)',
+                'state_id' => '5',
             ),
             320 =>
             array (
                 'id' => '321',
-                'nome' => 'Barrocas',
-                'estado_id' => '5',
+                'title' => 'Barrocas',
+                'state_id' => '5',
             ),
             321 =>
             array (
                 'id' => '322',
-                'nome' => 'Belmonte',
-                'estado_id' => '5',
+                'title' => 'Belmonte',
+                'state_id' => '5',
             ),
             322 =>
             array (
                 'id' => '323',
-                'nome' => 'Belo Campo',
-                'estado_id' => '5',
+                'title' => 'Belo Campo',
+                'state_id' => '5',
             ),
             323 =>
             array (
                 'id' => '324',
-                'nome' => 'Biritinga',
-                'estado_id' => '5',
+                'title' => 'Biritinga',
+                'state_id' => '5',
             ),
             324 =>
             array (
                 'id' => '325',
-                'nome' => 'Boa Nova',
-                'estado_id' => '5',
+                'title' => 'Boa Nova',
+                'state_id' => '5',
             ),
             325 =>
             array (
                 'id' => '326',
-                'nome' => 'Boa Vista do Tupim',
-                'estado_id' => '5',
+                'title' => 'Boa Vista do Tupim',
+                'state_id' => '5',
             ),
             326 =>
             array (
                 'id' => '327',
-                'nome' => 'Bom Jesus da Lapa',
-                'estado_id' => '5',
+                'title' => 'Bom Jesus da Lapa',
+                'state_id' => '5',
             ),
             327 =>
             array (
                 'id' => '328',
-                'nome' => 'Bom Jesus da Serra',
-                'estado_id' => '5',
+                'title' => 'Bom Jesus da Serra',
+                'state_id' => '5',
             ),
             328 =>
             array (
                 'id' => '329',
-                'nome' => 'Boninal',
-                'estado_id' => '5',
+                'title' => 'Boninal',
+                'state_id' => '5',
             ),
             329 =>
             array (
                 'id' => '330',
-                'nome' => 'Bonito',
-                'estado_id' => '5',
+                'title' => 'Bonito',
+                'state_id' => '5',
             ),
             330 =>
             array (
                 'id' => '331',
-                'nome' => 'Boquira',
-                'estado_id' => '5',
+                'title' => 'Boquira',
+                'state_id' => '5',
             ),
             331 =>
             array (
                 'id' => '332',
-                'nome' => 'Botuporã',
-                'estado_id' => '5',
+                'title' => 'Botuporã',
+                'state_id' => '5',
             ),
             332 =>
             array (
                 'id' => '333',
-                'nome' => 'Brejões',
-                'estado_id' => '5',
+                'title' => 'Brejões',
+                'state_id' => '5',
             ),
             333 =>
             array (
                 'id' => '334',
-                'nome' => 'Brejolândia',
-                'estado_id' => '5',
+                'title' => 'Brejolândia',
+                'state_id' => '5',
             ),
             334 =>
             array (
                 'id' => '335',
-                'nome' => 'Brotas de Macaúbas',
-                'estado_id' => '5',
+                'title' => 'Brotas de Macaúbas',
+                'state_id' => '5',
             ),
             335 =>
             array (
                 'id' => '336',
-                'nome' => 'Brumado',
-                'estado_id' => '5',
+                'title' => 'Brumado',
+                'state_id' => '5',
             ),
             336 =>
             array (
                 'id' => '337',
-                'nome' => 'Buerarema',
-                'estado_id' => '5',
+                'title' => 'Buerarema',
+                'state_id' => '5',
             ),
             337 =>
             array (
                 'id' => '338',
-                'nome' => 'Buritirama',
-                'estado_id' => '5',
+                'title' => 'Buritirama',
+                'state_id' => '5',
             ),
             338 =>
             array (
                 'id' => '339',
-                'nome' => 'Caatiba',
-                'estado_id' => '5',
+                'title' => 'Caatiba',
+                'state_id' => '5',
             ),
             339 =>
             array (
                 'id' => '340',
-                'nome' => 'Cabaceiras do Paraguaçu',
-                'estado_id' => '5',
+                'title' => 'Cabaceiras do Paraguaçu',
+                'state_id' => '5',
             ),
             340 =>
             array (
                 'id' => '341',
-                'nome' => 'Cachoeira',
-                'estado_id' => '5',
+                'title' => 'Cachoeira',
+                'state_id' => '5',
             ),
             341 =>
             array (
                 'id' => '342',
-                'nome' => 'Caculé',
-                'estado_id' => '5',
+                'title' => 'Caculé',
+                'state_id' => '5',
             ),
             342 =>
             array (
                 'id' => '343',
-                'nome' => 'Caém',
-                'estado_id' => '5',
+                'title' => 'Caém',
+                'state_id' => '5',
             ),
             343 =>
             array (
                 'id' => '344',
-                'nome' => 'Caetanos',
-                'estado_id' => '5',
+                'title' => 'Caetanos',
+                'state_id' => '5',
             ),
             344 =>
             array (
                 'id' => '345',
-                'nome' => 'Caetité',
-                'estado_id' => '5',
+                'title' => 'Caetité',
+                'state_id' => '5',
             ),
             345 =>
             array (
                 'id' => '346',
-                'nome' => 'Cafarnaum',
-                'estado_id' => '5',
+                'title' => 'Cafarnaum',
+                'state_id' => '5',
             ),
             346 =>
             array (
                 'id' => '347',
-                'nome' => 'Cairu',
-                'estado_id' => '5',
+                'title' => 'Cairu',
+                'state_id' => '5',
             ),
             347 =>
             array (
                 'id' => '348',
-                'nome' => 'Caldeirão Grande',
-                'estado_id' => '5',
+                'title' => 'Caldeirão Grande',
+                'state_id' => '5',
             ),
             348 =>
             array (
                 'id' => '349',
-                'nome' => 'Camacan',
-                'estado_id' => '5',
+                'title' => 'Camacan',
+                'state_id' => '5',
             ),
             349 =>
             array (
                 'id' => '350',
-                'nome' => 'Camaçari',
-                'estado_id' => '5',
+                'title' => 'Camaçari',
+                'state_id' => '5',
             ),
             350 =>
             array (
                 'id' => '351',
-                'nome' => 'Camamu',
-                'estado_id' => '5',
+                'title' => 'Camamu',
+                'state_id' => '5',
             ),
             351 =>
             array (
                 'id' => '352',
-                'nome' => 'Campo Alegre de Lourdes',
-                'estado_id' => '5',
+                'title' => 'Campo Alegre de Lourdes',
+                'state_id' => '5',
             ),
             352 =>
             array (
                 'id' => '353',
-                'nome' => 'Campo Formoso',
-                'estado_id' => '5',
+                'title' => 'Campo Formoso',
+                'state_id' => '5',
             ),
             353 =>
             array (
                 'id' => '354',
-                'nome' => 'Canápolis',
-                'estado_id' => '5',
+                'title' => 'Canápolis',
+                'state_id' => '5',
             ),
             354 =>
             array (
                 'id' => '355',
-                'nome' => 'Canarana',
-                'estado_id' => '5',
+                'title' => 'Canarana',
+                'state_id' => '5',
             ),
             355 =>
             array (
                 'id' => '356',
-                'nome' => 'Canavieiras',
-                'estado_id' => '5',
+                'title' => 'Canavieiras',
+                'state_id' => '5',
             ),
             356 =>
             array (
                 'id' => '357',
-                'nome' => 'Candeal',
-                'estado_id' => '5',
+                'title' => 'Candeal',
+                'state_id' => '5',
             ),
             357 =>
             array (
                 'id' => '358',
-                'nome' => 'Candeias',
-                'estado_id' => '5',
+                'title' => 'Candeias',
+                'state_id' => '5',
             ),
             358 =>
             array (
                 'id' => '359',
-                'nome' => 'Candiba',
-                'estado_id' => '5',
+                'title' => 'Candiba',
+                'state_id' => '5',
             ),
             359 =>
             array (
                 'id' => '360',
-                'nome' => 'Cândido Sales',
-                'estado_id' => '5',
+                'title' => 'Cândido Sales',
+                'state_id' => '5',
             ),
             360 =>
             array (
                 'id' => '361',
-                'nome' => 'Cansanção',
-                'estado_id' => '5',
+                'title' => 'Cansanção',
+                'state_id' => '5',
             ),
             361 =>
             array (
                 'id' => '362',
-                'nome' => 'Canudos',
-                'estado_id' => '5',
+                'title' => 'Canudos',
+                'state_id' => '5',
             ),
             362 =>
             array (
                 'id' => '363',
-                'nome' => 'Capela do Alto Alegre',
-                'estado_id' => '5',
+                'title' => 'Capela do Alto Alegre',
+                'state_id' => '5',
             ),
             363 =>
             array (
                 'id' => '364',
-                'nome' => 'Capim Grosso',
-                'estado_id' => '5',
+                'title' => 'Capim Grosso',
+                'state_id' => '5',
             ),
             364 =>
             array (
                 'id' => '365',
-                'nome' => 'Caraíbas',
-                'estado_id' => '5',
+                'title' => 'Caraíbas',
+                'state_id' => '5',
             ),
             365 =>
             array (
                 'id' => '366',
-                'nome' => 'Caravelas',
-                'estado_id' => '5',
+                'title' => 'Caravelas',
+                'state_id' => '5',
             ),
             366 =>
             array (
                 'id' => '367',
-                'nome' => 'Cardeal da Silva',
-                'estado_id' => '5',
+                'title' => 'Cardeal da Silva',
+                'state_id' => '5',
             ),
             367 =>
             array (
                 'id' => '368',
-                'nome' => 'Carinhanha',
-                'estado_id' => '5',
+                'title' => 'Carinhanha',
+                'state_id' => '5',
             ),
             368 =>
             array (
                 'id' => '369',
-                'nome' => 'Casa Nova',
-                'estado_id' => '5',
+                'title' => 'Casa Nova',
+                'state_id' => '5',
             ),
             369 =>
             array (
                 'id' => '370',
-                'nome' => 'Castro Alves',
-                'estado_id' => '5',
+                'title' => 'Castro Alves',
+                'state_id' => '5',
             ),
             370 =>
             array (
                 'id' => '371',
-                'nome' => 'Catolândia',
-                'estado_id' => '5',
+                'title' => 'Catolândia',
+                'state_id' => '5',
             ),
             371 =>
             array (
                 'id' => '372',
-                'nome' => 'Catu',
-                'estado_id' => '5',
+                'title' => 'Catu',
+                'state_id' => '5',
             ),
             372 =>
             array (
                 'id' => '373',
-                'nome' => 'Caturama',
-                'estado_id' => '5',
+                'title' => 'Caturama',
+                'state_id' => '5',
             ),
             373 =>
             array (
                 'id' => '374',
-                'nome' => 'Central',
-                'estado_id' => '5',
+                'title' => 'Central',
+                'state_id' => '5',
             ),
             374 =>
             array (
                 'id' => '375',
-                'nome' => 'Chorrochó',
-                'estado_id' => '5',
+                'title' => 'Chorrochó',
+                'state_id' => '5',
             ),
             375 =>
             array (
                 'id' => '376',
-                'nome' => 'Cícero Dantas',
-                'estado_id' => '5',
+                'title' => 'Cícero Dantas',
+                'state_id' => '5',
             ),
             376 =>
             array (
                 'id' => '377',
-                'nome' => 'Cipó',
-                'estado_id' => '5',
+                'title' => 'Cipó',
+                'state_id' => '5',
             ),
             377 =>
             array (
                 'id' => '378',
-                'nome' => 'Coaraci',
-                'estado_id' => '5',
+                'title' => 'Coaraci',
+                'state_id' => '5',
             ),
             378 =>
             array (
                 'id' => '379',
-                'nome' => 'Cocos',
-                'estado_id' => '5',
+                'title' => 'Cocos',
+                'state_id' => '5',
             ),
             379 =>
             array (
                 'id' => '380',
-                'nome' => 'Conceição da Feira',
-                'estado_id' => '5',
+                'title' => 'Conceição da Feira',
+                'state_id' => '5',
             ),
             380 =>
             array (
                 'id' => '381',
-                'nome' => 'Conceição do Almeida',
-                'estado_id' => '5',
+                'title' => 'Conceição do Almeida',
+                'state_id' => '5',
             ),
             381 =>
             array (
                 'id' => '382',
-                'nome' => 'Conceição do Coité',
-                'estado_id' => '5',
+                'title' => 'Conceição do Coité',
+                'state_id' => '5',
             ),
             382 =>
             array (
                 'id' => '383',
-                'nome' => 'Conceição do Jacuípe',
-                'estado_id' => '5',
+                'title' => 'Conceição do Jacuípe',
+                'state_id' => '5',
             ),
             383 =>
             array (
                 'id' => '384',
-                'nome' => 'Conde',
-                'estado_id' => '5',
+                'title' => 'Conde',
+                'state_id' => '5',
             ),
             384 =>
             array (
                 'id' => '385',
-                'nome' => 'Condeúba',
-                'estado_id' => '5',
+                'title' => 'Condeúba',
+                'state_id' => '5',
             ),
             385 =>
             array (
                 'id' => '386',
-                'nome' => 'Contendas do Sincorá',
-                'estado_id' => '5',
+                'title' => 'Contendas do Sincorá',
+                'state_id' => '5',
             ),
             386 =>
             array (
                 'id' => '387',
-                'nome' => 'Coração de Maria',
-                'estado_id' => '5',
+                'title' => 'Coração de Maria',
+                'state_id' => '5',
             ),
             387 =>
             array (
                 'id' => '388',
-                'nome' => 'Cordeiros',
-                'estado_id' => '5',
+                'title' => 'Cordeiros',
+                'state_id' => '5',
             ),
             388 =>
             array (
                 'id' => '389',
-                'nome' => 'Coribe',
-                'estado_id' => '5',
+                'title' => 'Coribe',
+                'state_id' => '5',
             ),
             389 =>
             array (
                 'id' => '390',
-                'nome' => 'Coronel João Sá',
-                'estado_id' => '5',
+                'title' => 'Coronel João Sá',
+                'state_id' => '5',
             ),
             390 =>
             array (
                 'id' => '391',
-                'nome' => 'Correntina',
-                'estado_id' => '5',
+                'title' => 'Correntina',
+                'state_id' => '5',
             ),
             391 =>
             array (
                 'id' => '392',
-                'nome' => 'Cotegipe',
-                'estado_id' => '5',
+                'title' => 'Cotegipe',
+                'state_id' => '5',
             ),
             392 =>
             array (
                 'id' => '393',
-                'nome' => 'Cravolândia',
-                'estado_id' => '5',
+                'title' => 'Cravolândia',
+                'state_id' => '5',
             ),
             393 =>
             array (
                 'id' => '394',
-                'nome' => 'Crisópolis',
-                'estado_id' => '5',
+                'title' => 'Crisópolis',
+                'state_id' => '5',
             ),
             394 =>
             array (
                 'id' => '395',
-                'nome' => 'Cristópolis',
-                'estado_id' => '5',
+                'title' => 'Cristópolis',
+                'state_id' => '5',
             ),
             395 =>
             array (
                 'id' => '396',
-                'nome' => 'Cruz das Almas',
-                'estado_id' => '5',
+                'title' => 'Cruz das Almas',
+                'state_id' => '5',
             ),
             396 =>
             array (
                 'id' => '397',
-                'nome' => 'Curaçá',
-                'estado_id' => '5',
+                'title' => 'Curaçá',
+                'state_id' => '5',
             ),
             397 =>
             array (
                 'id' => '398',
-                'nome' => 'Dário Meira',
-                'estado_id' => '5',
+                'title' => 'Dário Meira',
+                'state_id' => '5',
             ),
             398 =>
             array (
                 'id' => '399',
-                'nome' => 'Dias d`Ávila',
-                'estado_id' => '5',
+                'title' => 'Dias d`Ávila',
+                'state_id' => '5',
             ),
             399 =>
             array (
                 'id' => '400',
-                'nome' => 'Dom Basílio',
-                'estado_id' => '5',
+                'title' => 'Dom Basílio',
+                'state_id' => '5',
             ),
             400 =>
             array (
                 'id' => '401',
-                'nome' => 'Dom Macedo Costa',
-                'estado_id' => '5',
+                'title' => 'Dom Macedo Costa',
+                'state_id' => '5',
             ),
             401 =>
             array (
                 'id' => '402',
-                'nome' => 'Elísio Medrado',
-                'estado_id' => '5',
+                'title' => 'Elísio Medrado',
+                'state_id' => '5',
             ),
             402 =>
             array (
                 'id' => '403',
-                'nome' => 'Encruzilhada',
-                'estado_id' => '5',
+                'title' => 'Encruzilhada',
+                'state_id' => '5',
             ),
             403 =>
             array (
                 'id' => '404',
-                'nome' => 'Entre Rios',
-                'estado_id' => '5',
+                'title' => 'Entre Rios',
+                'state_id' => '5',
             ),
             404 =>
             array (
                 'id' => '405',
-                'nome' => 'Érico Cardoso',
-                'estado_id' => '5',
+                'title' => 'Érico Cardoso',
+                'state_id' => '5',
             ),
             405 =>
             array (
                 'id' => '406',
-                'nome' => 'Esplanada',
-                'estado_id' => '5',
+                'title' => 'Esplanada',
+                'state_id' => '5',
             ),
             406 =>
             array (
                 'id' => '407',
-                'nome' => 'Euclides da Cunha',
-                'estado_id' => '5',
+                'title' => 'Euclides da Cunha',
+                'state_id' => '5',
             ),
             407 =>
             array (
                 'id' => '408',
-                'nome' => 'Eunápolis',
-                'estado_id' => '5',
+                'title' => 'Eunápolis',
+                'state_id' => '5',
             ),
             408 =>
             array (
                 'id' => '409',
-                'nome' => 'Fátima',
-                'estado_id' => '5',
+                'title' => 'Fátima',
+                'state_id' => '5',
             ),
             409 =>
             array (
                 'id' => '410',
-                'nome' => 'Feira da Mata',
-                'estado_id' => '5',
+                'title' => 'Feira da Mata',
+                'state_id' => '5',
             ),
             410 =>
             array (
                 'id' => '411',
-                'nome' => 'Feira de Santana',
-                'estado_id' => '5',
+                'title' => 'Feira de Santana',
+                'state_id' => '5',
             ),
             411 =>
             array (
                 'id' => '412',
-                'nome' => 'Filadélfia',
-                'estado_id' => '5',
+                'title' => 'Filadélfia',
+                'state_id' => '5',
             ),
             412 =>
             array (
                 'id' => '413',
-                'nome' => 'Firmino Alves',
-                'estado_id' => '5',
+                'title' => 'Firmino Alves',
+                'state_id' => '5',
             ),
             413 =>
             array (
                 'id' => '414',
-                'nome' => 'Floresta Azul',
-                'estado_id' => '5',
+                'title' => 'Floresta Azul',
+                'state_id' => '5',
             ),
             414 =>
             array (
                 'id' => '415',
-                'nome' => 'Formosa do Rio Preto',
-                'estado_id' => '5',
+                'title' => 'Formosa do Rio Preto',
+                'state_id' => '5',
             ),
             415 =>
             array (
                 'id' => '416',
-                'nome' => 'Gandu',
-                'estado_id' => '5',
+                'title' => 'Gandu',
+                'state_id' => '5',
             ),
             416 =>
             array (
                 'id' => '417',
-                'nome' => 'Gavião',
-                'estado_id' => '5',
+                'title' => 'Gavião',
+                'state_id' => '5',
             ),
             417 =>
             array (
                 'id' => '418',
-                'nome' => 'Gentio do Ouro',
-                'estado_id' => '5',
+                'title' => 'Gentio do Ouro',
+                'state_id' => '5',
             ),
             418 =>
             array (
                 'id' => '419',
-                'nome' => 'Glória',
-                'estado_id' => '5',
+                'title' => 'Glória',
+                'state_id' => '5',
             ),
             419 =>
             array (
                 'id' => '420',
-                'nome' => 'Gongogi',
-                'estado_id' => '5',
+                'title' => 'Gongogi',
+                'state_id' => '5',
             ),
             420 =>
             array (
                 'id' => '421',
-                'nome' => 'Governador Mangabeira',
-                'estado_id' => '5',
+                'title' => 'Governador Mangabeira',
+                'state_id' => '5',
             ),
             421 =>
             array (
                 'id' => '422',
-                'nome' => 'Guajeru',
-                'estado_id' => '5',
+                'title' => 'Guajeru',
+                'state_id' => '5',
             ),
             422 =>
             array (
                 'id' => '423',
-                'nome' => 'Guanambi',
-                'estado_id' => '5',
+                'title' => 'Guanambi',
+                'state_id' => '5',
             ),
             423 =>
             array (
                 'id' => '424',
-                'nome' => 'Guaratinga',
-                'estado_id' => '5',
+                'title' => 'Guaratinga',
+                'state_id' => '5',
             ),
             424 =>
             array (
                 'id' => '425',
-                'nome' => 'Heliópolis',
-                'estado_id' => '5',
+                'title' => 'Heliópolis',
+                'state_id' => '5',
             ),
             425 =>
             array (
                 'id' => '426',
-                'nome' => 'Iaçu',
-                'estado_id' => '5',
+                'title' => 'Iaçu',
+                'state_id' => '5',
             ),
             426 =>
             array (
                 'id' => '427',
-                'nome' => 'Ibiassucê',
-                'estado_id' => '5',
+                'title' => 'Ibiassucê',
+                'state_id' => '5',
             ),
             427 =>
             array (
                 'id' => '428',
-                'nome' => 'Ibicaraí',
-                'estado_id' => '5',
+                'title' => 'Ibicaraí',
+                'state_id' => '5',
             ),
             428 =>
             array (
                 'id' => '429',
-                'nome' => 'Ibicoara',
-                'estado_id' => '5',
+                'title' => 'Ibicoara',
+                'state_id' => '5',
             ),
             429 =>
             array (
                 'id' => '430',
-                'nome' => 'Ibicuí',
-                'estado_id' => '5',
+                'title' => 'Ibicuí',
+                'state_id' => '5',
             ),
             430 =>
             array (
                 'id' => '431',
-                'nome' => 'Ibipeba',
-                'estado_id' => '5',
+                'title' => 'Ibipeba',
+                'state_id' => '5',
             ),
             431 =>
             array (
                 'id' => '432',
-                'nome' => 'Ibipitanga',
-                'estado_id' => '5',
+                'title' => 'Ibipitanga',
+                'state_id' => '5',
             ),
             432 =>
             array (
                 'id' => '433',
-                'nome' => 'Ibiquera',
-                'estado_id' => '5',
+                'title' => 'Ibiquera',
+                'state_id' => '5',
             ),
             433 =>
             array (
                 'id' => '434',
-                'nome' => 'Ibirapitanga',
-                'estado_id' => '5',
+                'title' => 'Ibirapitanga',
+                'state_id' => '5',
             ),
             434 =>
             array (
                 'id' => '435',
-                'nome' => 'Ibirapuã',
-                'estado_id' => '5',
+                'title' => 'Ibirapuã',
+                'state_id' => '5',
             ),
             435 =>
             array (
                 'id' => '436',
-                'nome' => 'Ibirataia',
-                'estado_id' => '5',
+                'title' => 'Ibirataia',
+                'state_id' => '5',
             ),
             436 =>
             array (
                 'id' => '437',
-                'nome' => 'Ibitiara',
-                'estado_id' => '5',
+                'title' => 'Ibitiara',
+                'state_id' => '5',
             ),
             437 =>
             array (
                 'id' => '438',
-                'nome' => 'Ibititá',
-                'estado_id' => '5',
+                'title' => 'Ibititá',
+                'state_id' => '5',
             ),
             438 =>
             array (
                 'id' => '439',
-                'nome' => 'Ibotirama',
-                'estado_id' => '5',
+                'title' => 'Ibotirama',
+                'state_id' => '5',
             ),
             439 =>
             array (
                 'id' => '440',
-                'nome' => 'Ichu',
-                'estado_id' => '5',
+                'title' => 'Ichu',
+                'state_id' => '5',
             ),
             440 =>
             array (
                 'id' => '441',
-                'nome' => 'Igaporã',
-                'estado_id' => '5',
+                'title' => 'Igaporã',
+                'state_id' => '5',
             ),
             441 =>
             array (
                 'id' => '442',
-                'nome' => 'Igrapiúna',
-                'estado_id' => '5',
+                'title' => 'Igrapiúna',
+                'state_id' => '5',
             ),
             442 =>
             array (
                 'id' => '443',
-                'nome' => 'Iguaí',
-                'estado_id' => '5',
+                'title' => 'Iguaí',
+                'state_id' => '5',
             ),
             443 =>
             array (
                 'id' => '444',
-                'nome' => 'Ilhéus',
-                'estado_id' => '5',
+                'title' => 'Ilhéus',
+                'state_id' => '5',
             ),
             444 =>
             array (
                 'id' => '445',
-                'nome' => 'Inhambupe',
-                'estado_id' => '5',
+                'title' => 'Inhambupe',
+                'state_id' => '5',
             ),
             445 =>
             array (
                 'id' => '446',
-                'nome' => 'Ipecaetá',
-                'estado_id' => '5',
+                'title' => 'Ipecaetá',
+                'state_id' => '5',
             ),
             446 =>
             array (
                 'id' => '447',
-                'nome' => 'Ipiaú',
-                'estado_id' => '5',
+                'title' => 'Ipiaú',
+                'state_id' => '5',
             ),
             447 =>
             array (
                 'id' => '448',
-                'nome' => 'Ipirá',
-                'estado_id' => '5',
+                'title' => 'Ipirá',
+                'state_id' => '5',
             ),
             448 =>
             array (
                 'id' => '449',
-                'nome' => 'Ipupiara',
-                'estado_id' => '5',
+                'title' => 'Ipupiara',
+                'state_id' => '5',
             ),
             449 =>
             array (
                 'id' => '450',
-                'nome' => 'Irajuba',
-                'estado_id' => '5',
+                'title' => 'Irajuba',
+                'state_id' => '5',
             ),
             450 =>
             array (
                 'id' => '451',
-                'nome' => 'Iramaia',
-                'estado_id' => '5',
+                'title' => 'Iramaia',
+                'state_id' => '5',
             ),
             451 =>
             array (
                 'id' => '452',
-                'nome' => 'Iraquara',
-                'estado_id' => '5',
+                'title' => 'Iraquara',
+                'state_id' => '5',
             ),
             452 =>
             array (
                 'id' => '453',
-                'nome' => 'Irará',
-                'estado_id' => '5',
+                'title' => 'Irará',
+                'state_id' => '5',
             ),
             453 =>
             array (
                 'id' => '454',
-                'nome' => 'Irecê',
-                'estado_id' => '5',
+                'title' => 'Irecê',
+                'state_id' => '5',
             ),
             454 =>
             array (
                 'id' => '455',
-                'nome' => 'Itabela',
-                'estado_id' => '5',
+                'title' => 'Itabela',
+                'state_id' => '5',
             ),
             455 =>
             array (
                 'id' => '456',
-                'nome' => 'Itaberaba',
-                'estado_id' => '5',
+                'title' => 'Itaberaba',
+                'state_id' => '5',
             ),
             456 =>
             array (
                 'id' => '457',
-                'nome' => 'Itabuna',
-                'estado_id' => '5',
+                'title' => 'Itabuna',
+                'state_id' => '5',
             ),
             457 =>
             array (
                 'id' => '458',
-                'nome' => 'Itacaré',
-                'estado_id' => '5',
+                'title' => 'Itacaré',
+                'state_id' => '5',
             ),
             458 =>
             array (
                 'id' => '459',
-                'nome' => 'Itaeté',
-                'estado_id' => '5',
+                'title' => 'Itaeté',
+                'state_id' => '5',
             ),
             459 =>
             array (
                 'id' => '460',
-                'nome' => 'Itagi',
-                'estado_id' => '5',
+                'title' => 'Itagi',
+                'state_id' => '5',
             ),
             460 =>
             array (
                 'id' => '461',
-                'nome' => 'Itagibá',
-                'estado_id' => '5',
+                'title' => 'Itagibá',
+                'state_id' => '5',
             ),
             461 =>
             array (
                 'id' => '462',
-                'nome' => 'Itagimirim',
-                'estado_id' => '5',
+                'title' => 'Itagimirim',
+                'state_id' => '5',
             ),
             462 =>
             array (
                 'id' => '463',
-                'nome' => 'Itaguaçu da Bahia',
-                'estado_id' => '5',
+                'title' => 'Itaguaçu da Bahia',
+                'state_id' => '5',
             ),
             463 =>
             array (
                 'id' => '464',
-                'nome' => 'Itaju do Colônia',
-                'estado_id' => '5',
+                'title' => 'Itaju do Colônia',
+                'state_id' => '5',
             ),
             464 =>
             array (
                 'id' => '465',
-                'nome' => 'Itajuípe',
-                'estado_id' => '5',
+                'title' => 'Itajuípe',
+                'state_id' => '5',
             ),
             465 =>
             array (
                 'id' => '466',
-                'nome' => 'Itamaraju',
-                'estado_id' => '5',
+                'title' => 'Itamaraju',
+                'state_id' => '5',
             ),
             466 =>
             array (
                 'id' => '467',
-                'nome' => 'Itamari',
-                'estado_id' => '5',
+                'title' => 'Itamari',
+                'state_id' => '5',
             ),
             467 =>
             array (
                 'id' => '468',
-                'nome' => 'Itambé',
-                'estado_id' => '5',
+                'title' => 'Itambé',
+                'state_id' => '5',
             ),
             468 =>
             array (
                 'id' => '469',
-                'nome' => 'Itanagra',
-                'estado_id' => '5',
+                'title' => 'Itanagra',
+                'state_id' => '5',
             ),
             469 =>
             array (
                 'id' => '470',
-                'nome' => 'Itanhém',
-                'estado_id' => '5',
+                'title' => 'Itanhém',
+                'state_id' => '5',
             ),
             470 =>
             array (
                 'id' => '471',
-                'nome' => 'Itaparica',
-                'estado_id' => '5',
+                'title' => 'Itaparica',
+                'state_id' => '5',
             ),
             471 =>
             array (
                 'id' => '472',
-                'nome' => 'Itapé',
-                'estado_id' => '5',
+                'title' => 'Itapé',
+                'state_id' => '5',
             ),
             472 =>
             array (
                 'id' => '473',
-                'nome' => 'Itapebi',
-                'estado_id' => '5',
+                'title' => 'Itapebi',
+                'state_id' => '5',
             ),
             473 =>
             array (
                 'id' => '474',
-                'nome' => 'Itapetinga',
-                'estado_id' => '5',
+                'title' => 'Itapetinga',
+                'state_id' => '5',
             ),
             474 =>
             array (
                 'id' => '475',
-                'nome' => 'Itapicuru',
-                'estado_id' => '5',
+                'title' => 'Itapicuru',
+                'state_id' => '5',
             ),
             475 =>
             array (
                 'id' => '476',
-                'nome' => 'Itapitanga',
-                'estado_id' => '5',
+                'title' => 'Itapitanga',
+                'state_id' => '5',
             ),
             476 =>
             array (
                 'id' => '477',
-                'nome' => 'Itaquara',
-                'estado_id' => '5',
+                'title' => 'Itaquara',
+                'state_id' => '5',
             ),
             477 =>
             array (
                 'id' => '478',
-                'nome' => 'Itarantim',
-                'estado_id' => '5',
+                'title' => 'Itarantim',
+                'state_id' => '5',
             ),
             478 =>
             array (
                 'id' => '479',
-                'nome' => 'Itatim',
-                'estado_id' => '5',
+                'title' => 'Itatim',
+                'state_id' => '5',
             ),
             479 =>
             array (
                 'id' => '480',
-                'nome' => 'Itiruçu',
-                'estado_id' => '5',
+                'title' => 'Itiruçu',
+                'state_id' => '5',
             ),
             480 =>
             array (
                 'id' => '481',
-                'nome' => 'Itiúba',
-                'estado_id' => '5',
+                'title' => 'Itiúba',
+                'state_id' => '5',
             ),
             481 =>
             array (
                 'id' => '482',
-                'nome' => 'Itororó',
-                'estado_id' => '5',
+                'title' => 'Itororó',
+                'state_id' => '5',
             ),
             482 =>
             array (
                 'id' => '483',
-                'nome' => 'Ituaçu',
-                'estado_id' => '5',
+                'title' => 'Ituaçu',
+                'state_id' => '5',
             ),
             483 =>
             array (
                 'id' => '484',
-                'nome' => 'Ituberá',
-                'estado_id' => '5',
+                'title' => 'Ituberá',
+                'state_id' => '5',
             ),
             484 =>
             array (
                 'id' => '485',
-                'nome' => 'Iuiú',
-                'estado_id' => '5',
+                'title' => 'Iuiú',
+                'state_id' => '5',
             ),
             485 =>
             array (
                 'id' => '486',
-                'nome' => 'Jaborandi',
-                'estado_id' => '5',
+                'title' => 'Jaborandi',
+                'state_id' => '5',
             ),
             486 =>
             array (
                 'id' => '487',
-                'nome' => 'Jacaraci',
-                'estado_id' => '5',
+                'title' => 'Jacaraci',
+                'state_id' => '5',
             ),
             487 =>
             array (
                 'id' => '488',
-                'nome' => 'Jacobina',
-                'estado_id' => '5',
+                'title' => 'Jacobina',
+                'state_id' => '5',
             ),
             488 =>
             array (
                 'id' => '489',
-                'nome' => 'Jaguaquara',
-                'estado_id' => '5',
+                'title' => 'Jaguaquara',
+                'state_id' => '5',
             ),
             489 =>
             array (
                 'id' => '490',
-                'nome' => 'Jaguarari',
-                'estado_id' => '5',
+                'title' => 'Jaguarari',
+                'state_id' => '5',
             ),
             490 =>
             array (
                 'id' => '491',
-                'nome' => 'Jaguaripe',
-                'estado_id' => '5',
+                'title' => 'Jaguaripe',
+                'state_id' => '5',
             ),
             491 =>
             array (
                 'id' => '492',
-                'nome' => 'Jandaíra',
-                'estado_id' => '5',
+                'title' => 'Jandaíra',
+                'state_id' => '5',
             ),
             492 =>
             array (
                 'id' => '493',
-                'nome' => 'Jequié',
-                'estado_id' => '5',
+                'title' => 'Jequié',
+                'state_id' => '5',
             ),
             493 =>
             array (
                 'id' => '494',
-                'nome' => 'Jeremoabo',
-                'estado_id' => '5',
+                'title' => 'Jeremoabo',
+                'state_id' => '5',
             ),
             494 =>
             array (
                 'id' => '495',
-                'nome' => 'Jiquiriçá',
-                'estado_id' => '5',
+                'title' => 'Jiquiriçá',
+                'state_id' => '5',
             ),
             495 =>
             array (
                 'id' => '496',
-                'nome' => 'Jitaúna',
-                'estado_id' => '5',
+                'title' => 'Jitaúna',
+                'state_id' => '5',
             ),
             496 =>
             array (
                 'id' => '497',
-                'nome' => 'João Dourado',
-                'estado_id' => '5',
+                'title' => 'João Dourado',
+                'state_id' => '5',
             ),
             497 =>
             array (
                 'id' => '498',
-                'nome' => 'Juazeiro',
-                'estado_id' => '5',
+                'title' => 'Juazeiro',
+                'state_id' => '5',
             ),
             498 =>
             array (
                 'id' => '499',
-                'nome' => 'Jucuruçu',
-                'estado_id' => '5',
+                'title' => 'Jucuruçu',
+                'state_id' => '5',
             ),
             499 =>
             array (
                 'id' => '500',
-                'nome' => 'Jussara',
-                'estado_id' => '5',
+                'title' => 'Jussara',
+                'state_id' => '5',
             ),
             499 =>
                 array (
                     'id' => '500',
-                    'nome' => 'Jussara',
-                    'estado_id' => '5',
+                    'title' => 'Jussara',
+                    'state_id' => '5',
                 ),
         ));*/
     }

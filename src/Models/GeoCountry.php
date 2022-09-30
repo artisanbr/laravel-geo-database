@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class GeoCountry extends Model
 {
-    protected $table = 'geo_paises';
+    protected $table = 'geo_countries';
 
-    protected $fillable = ['id', 'nome', 'sigla', 'nome_en', 'sigla', 'bacen'];
+    protected $fillable = ['id', 'title', 'slug', 'title_en', 'bacen'];
 
 
-    public function estados()
+    public function states()
     {
-        return $this->hasMany(GeoEstado::class);
+        return $this->hasMany(GeoState::class);
     }
 }
 
-class_alias(GeoCountry::class, 'ArtisanLabs\GModel\Model');
+class_alias(GeoCountry::class, 'ArtisanLabs\LaravelGeoDatabase\GeoPais');

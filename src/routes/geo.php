@@ -3,8 +3,8 @@
 //used to disable CORS
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use ArtisanLabs\LaravelGeoDatabase\Models\GeoCidade;
-use ArtisanLabs\LaravelGeoDatabase\Models\GeoEstado;
+use ArtisanLabs\LaravelGeoDatabase\Models\GeoCity;
+use ArtisanLabs\LaravelGeoDatabase\Models\GeoState;
 use ArtisanLabs\LaravelGeoDatabase\Models\GeoCountry;
 
 /*header('Access-Control-Allow-Origin:  *');
@@ -16,11 +16,11 @@ header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Origin, Autho
 */
 
 // |||| Informações de endereço |||
-Route::get('paises', function(){
+Route::get('countries', function(){
     return GeoCountry::all();
-})->name('paises');
+})->name('countries');
 
-Route::post('paises/select2', function(Request $request){
+Route::post('countries/select2', function(Request $request){
 
     $itens = GeoCountry::orderBy("nome");
 
@@ -39,28 +39,28 @@ Route::post('paises/select2', function(Request $request){
     ]);
 
     return response()->json($itens);
-})->name('paises.select2');
+})->name('countries.select2');
 
-Route::get('paises/estados', function(){
-    return GeoCountry::with('estados')->get();
-})->name('paises.estados');
+Route::get('countries/states', function(){
+    return GeoCountry::with('states')->get();
+})->name('countries.states');
 
-Route::get('paises/{id}', function($id){
+Route::get('countries/{id}', function($id){
     return GeoCountry::findOrFail($id);
-})->name('paises.view');
+})->name('countries.view');
 
-Route::get('estados', function(){
-    return GeoEstado::all();
-})->name('estados');
+Route::get('states', function(){
+    return GeoState::all();
+})->name('states');
 
-Route::post('estados/select2/{pais_id?}', function(Request $request, $pais_id = null){
+Route::post('states/select2/{country_id?}', function(Request $request, $country_id = null){
 
-    $pais_id = $request->pais_id ?? $pais_id;
+    $country_id = $request->country_id ?? $country_id;
 
-    $itens = GeoEstado::orderBy("nome");
+    $itens = GeoState::orderBy("nome");
 
-    if($pais_id){
-        $itens = $itens->where('pais_id', $pais_id);
+    if($country_id){
+        $itens = $itens->where('country_id', $country_id);
     }
 
     if($request->search){
@@ -72,40 +72,40 @@ Route::post('estados/select2/{pais_id?}', function(Request $request, $pais_id = 
     $itens = $itens->get();
 
 
-    $itens->transform(fn(GeoEstado $item, $key) => [
+    $itens->transform(fn(GeoState $item, $key) => [
         'id' => $item->uf,
         'text' => $item->nome,
         'selected' => ($item->id == $request->selected_value) || ($request->search && Str::lower($item->uf) === Str::lower($request->search)),
     ]);
 
     return response()->json($itens);
-})->name('estados.select2');
+})->name('states.select2');
 
-Route::get('estados/{id}', function($id){
-    return GeoEstado::findOrFail($id);
-})->name('estados.view');
+Route::get('states/{id}', function($id){
+    return GeoState::findOrFail($id);
+})->name('states.view');
 
-Route::get('estados/pais/{id}', function($id){
-    return GeoEstado::where('pais_id', $id)->get();
-})->name('estados.pais');
+Route::get('states/country/{id}', function($id){
+    return GeoState::where('country_id', $id)->get();
+})->name('states.country');
 
-Route::get('cidades', function(){
-    return GeoCidade::all();
-})->name('cidades');
+Route::get('cities', function(){
+    return GeoCity::all();
+})->name('cities');
 
-Route::post('cidades/select2/{estado_id?}', function(Request $request, $estado_id = null){
+Route::post('cities/select2/{state_id?}', function(Request $request, $state_id = null){
 
-    $estado_id = $request->estado_id ?? $estado_id;
+    $state_id = $request->state_id ?? $state_id;
 
-    $itens = GeoCidade::orderBy("nome")->with('estado');
+    $itens = GeoCity::orderBy("nome")->with('state');
 
-    if($estado_id){
-        $itens = $itens->where('estado_id', $estado_id);
+    if($state_id){
+        $itens = $itens->where('state_id', $state_id);
     }
 
-    if($request->estado_uf){
-        $itens = $itens->whereHas('estado', function ($q) use($request){
-            $q->where('uf', $request->estado_uf);
+    if($request->state_uf){
+        $itens = $itens->whereHas('state', function ($q) use($request){
+            $q->where('uf', $request->state_uf);
         });
     }
 
@@ -117,21 +117,21 @@ Route::post('cidades/select2/{estado_id?}', function(Request $request, $estado_i
 
     $itens = $itens->get();
 
-    $itens->transform(fn(GeoCidade $item, $key) => [
+    $itens->transform(fn(GeoCity $item, $key) => [
         'id' => $item->nome,
         'text' => $item->nome,
         'selected' => $item->id == $request->selected_value || ($request->search && Str::lower($item->nome) === Str::lower($request->search)),
     ]);
 
     return response()->json($itens);
-})->name('cidades.select2');
+})->name('cities.select2');
 
-Route::get('cidades/{id}', function($id){
-    return GeoCidade::findOrFail($id);
-})->name('cidades.view');
+Route::get('cities/{id}', function($id){
+    return GeoCity::findOrFail($id);
+})->name('cities.view');
 
-// alias to estados/cidades
-Route::get( 'cidades/estado/{id}', function($id){
-    return GeoCidade::where('estado_id', $id)->get();
-})->name('cidades.estado');
+// alias to states/cities
+Route::get( 'cities/state/{id}', function($id){
+    return GeoCity::where('state_id', $id)->get();
+})->name('cities.state');
 
