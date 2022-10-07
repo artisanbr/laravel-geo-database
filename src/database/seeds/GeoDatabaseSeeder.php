@@ -14,8 +14,8 @@ class GeoDatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call('UsersTableSeeder');
-        //$this->call(GeoPaisesTableSeeder::class);
-        //$this->call(GeoEstadosTableSeeder::class);
+        $this->call(GeoCountriesTableSeeder::class);
+        $this->call(GeoStatesTableSeeder::class);
         $this->call(GeoCitiesTableSeeder::class);
     }
 }
