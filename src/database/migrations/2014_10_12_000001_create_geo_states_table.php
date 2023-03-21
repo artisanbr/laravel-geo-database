@@ -14,14 +14,14 @@ class CreateGeoStatesTable extends Migration
     public function up()
     {
         Schema::create('geo_states', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
+            $table->foreignId('country_id')->nullable()->constrained('geo_countries');
 
             $table->string('title')->nullable();
             $table->string('slug', 3)->nullable();
             $table->integer('ibge')->nullable();
             $table->string('phone_prefix', 3)->nullable();
 
-            $table->foreignId('country_id')->nullable()->constrained('geo_countries');
         });
     }
 

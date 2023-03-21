@@ -1,5 +1,6 @@
 {
     "name": "artisan-labs/laravel-geo-database",
+    "version": "dev-stable",
     "description": "Laravel Global Geo Info Database",
     "require": {
         "php": ">=7",
@@ -22,11 +23,6 @@
             "providers": [
                 "ArtisanLabs\\LaravelGeoDatabase\\GeoDatabaseServiceProvider"
             ]
-        },
-        "branch-alias": {
-            "dev-main": "1.9-dev",
-            "master": "1.9-dev",
-            "dev": "dev-main"
         }
     },
     "autoload": {

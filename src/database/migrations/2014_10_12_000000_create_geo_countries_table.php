@@ -14,7 +14,7 @@ class CreateGeoCountriesTable extends Migration
     public function up()
     {
         Schema::create('geo_countries', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('title')->nullable();
             $table->string('title_en')->nullable();
             $table->string('slug', 3)->nullable();
